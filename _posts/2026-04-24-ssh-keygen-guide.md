@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SSH Keygen Guide (Ed25519 Recommended)"
+title: "SSH Keygen Guide"
 ---
 
 # 🔐 SSH Keygen Guide
