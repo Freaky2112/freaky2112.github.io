@@ -16,7 +16,7 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 </div>
 
 <div class="card">
-<h2>🚀 <a href="/project/">Projects</a></h2>
+<h2>🚀 <a href="/projects/">Projects</a></h2>
 <ul>
   <li>Docker stack (Uptime Kuma, Cloudflare, Homer, NPM, )</li>
   <li>Home Assistant automations</li>
