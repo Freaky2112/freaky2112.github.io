@@ -24,7 +24,7 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 </div>
 
 <div class="card">
-<h2><a href="/docs/">📄 Documentation</a></h2>
+<h2> 📄<a href="/docs/">Documentation</a></h2>
 <ul>
   <li>Setup guides</li>
   <li>Troubleshooting notes</li>
