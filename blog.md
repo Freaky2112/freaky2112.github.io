@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Blog
+title: Blog 
 permalink: /blog/
 ---
 
-# 📝 Blog
+# 📝 Blog / Knoweledge Base
 
 {% for post in site.posts %}
   <div class="card">
