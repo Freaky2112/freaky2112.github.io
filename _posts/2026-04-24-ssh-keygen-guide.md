@@ -1,14 +1,3 @@
-Got it—here’s your **complete, clean blog post in a single file** ready to drop into your repo.
-
-Just save it as:
-
-```
-_posts/2026-04-24-ssh-keygen-guide.md
-```
-
----
-
-````markdown
 ---
 layout: post
 title: "SSH Keygen Guide (Ed25519 Recommended)"
@@ -40,7 +29,7 @@ Here’s a quick breakdown:
 
 ---
 
-## 🚀 Why Ed25519?
+## Why Ed25519?
 
 Ed25519 is the current standard for SSH keys:
 
@@ -161,16 +150,4 @@ If you're still using RSA or older keys, switching to **Ed25519** is a quick upg
 
 ---
 
-🚀 You now have a modern SSH setup.
-
-```
-
----
-
-If you want next, I can:
-- :contentReference[oaicite:0]{index=0}
-- :contentReference[oaicite:1]{index=1}
-- or :contentReference[oaicite:2]{index=2}
-
-Just tell me 👍
-```
+You now have a modern SSH setup.
