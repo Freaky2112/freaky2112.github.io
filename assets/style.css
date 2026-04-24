@@ -39,7 +39,7 @@ body {
 .logo {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #0ae440;
+  color: #0ae440 !important;
   letter-spacing: 0.5px;
 }
 
