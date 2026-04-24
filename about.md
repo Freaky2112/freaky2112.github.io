@@ -10,7 +10,7 @@ I’m running a homelab focused on:
 
 - 🐳 Docker & self-hosting  
 - 📊 Monitoring (Grafana, Loki)  
-- 🏠 Home automation  
+- 🏠 Home automation (Home Assistant)  
 
 <div class="card">
 <h2>🎯 Goals</h2>

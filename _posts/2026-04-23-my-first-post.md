@@ -8,6 +8,6 @@ title: "My First Post"
 This is my homelab blog.
 
 Today I:
-- Installed Grafana
-- Setup Loki
-- Broke things 😄
+- Setup Github as a webpage
+- Broke lots of things 😄
+- And fix it after 
