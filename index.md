@@ -8,7 +8,7 @@ title: Home
 I run a self-hosted environment focused on automation, monitoring, and privacy.
 
 <div class="card">
-<h2><a href="/blog/">📝 Blog</a></h2>
+<h2>📝 <a href="/blog/">Blog</a></h2>
 <ul>
   <li>Setup guides</li>
   <li>Knowlegde Base</li>
@@ -16,7 +16,7 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 </div>
 
 <div class="card">
-<h2><a href="/project/">🚀 Projects</a></h2>
+<h2>🚀 <a href="/project/">Projects</a></h2>
 <ul>
   <li>Docker stack (Uptime Kuma, Cloudflare, Homer, NPM, )</li>
   <li>Home Assistant automations</li>
@@ -24,7 +24,7 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 </div>
 
 <div class="card">
-<h2> 📄<a href="/docs/">Documentation</a></h2>
+<h2> 📄 <a href="/docs/">Documentation</a></h2>
 <ul>
   <li>Setup guides</li>
   <li>Troubleshooting notes</li>
