@@ -134,6 +134,86 @@ ssh myserver
 
 ---
 
+## 📤 Copy Your Key to a Server (ssh-copy-id)
+
+Instead of manually editing `authorized_keys`, you can use `ssh-copy-id` to install your public key on a remote server.
+
+### Basic usage
+
+```bash
+ssh-copy-id user@server-ip
+````
+
+👉 This will:
+
+* Copy your public key (`~/.ssh/id_ed25519.pub`)
+* Add it to `~/.ssh/authorized_keys` on the server
+* Set correct permissions automatically
+
+---
+
+### Specify a key manually
+
+If you have multiple keys:
+
+```bash
+ssh-copy-id -i ~/.ssh/id_ed25519 user@server-ip
+```
+
+---
+
+### Test your connection
+
+After copying the key:
+
+```bash
+ssh user@server-ip
+```
+
+👉 You should now connect **without a password** (only passphrase if set).
+
+---
+
+## ⚠️ Troubleshooting
+
+* Make sure SSH is running on the server
+* Check permissions:
+
+  ```bash
+  chmod 700 ~/.ssh
+  chmod 600 ~/.ssh/authorized_keys
+  ```
+* Ensure password login is enabled temporarily (for first copy)
+
+---
+
+## 🔐 Bonus: Disable password login (after setup)
+
+Once your key works, improve security:
+
+Edit SSH config on the server:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Set:
+
+```bash
+PasswordAuthentication no
+```
+
+Then restart SSH:
+
+```bash
+sudo systemctl restart ssh
+```
+
+✅ Your server now accepts only SSH key authentication.
+
+
+---
+
 ## 💡 Tips
 
 * Keep old RSA keys only if needed
