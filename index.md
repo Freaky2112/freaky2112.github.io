@@ -3,14 +3,14 @@ layout: default
 title: Home
 ---
 
-# 👋 Welcome to My Homelab
+# 👨‍💻 Welcome to My Homelab
 
 I run a self-hosted environment focused on automation, monitoring, and privacy.
 
 <div class="card">
 <h2>🚀 Projects</h2>
 <ul>
-  <li>Docker stack (Grafana, Loki, Uptime Kuma)</li>
+  <li>Docker stack (Uptime Kuma, Cloudflare, Homer, NPM, )</li>
   <li>Home Assistant automations</li>
 </ul>
 </div>

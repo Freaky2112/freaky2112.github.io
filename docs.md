@@ -10,7 +10,7 @@ permalink: /docs/
 <h2>🛠 Setup Guides</h2>
 <ul>
   <li>Install Docker stack</li>
-  <li>Setup Grafana dashboards</li>
+  <li>Edge Router Config</li>
   <li>Configure reverse proxy</li>
 </ul>
 </div>
@@ -19,6 +19,5 @@ permalink: /docs/
 <h2>🧠 Notes</h2>
 <ul>
   <li>Commands & cheatsheets</li>
-  <li>Troubleshooting logs</li>
 </ul>
 </div>
