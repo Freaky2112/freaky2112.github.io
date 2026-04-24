@@ -1,0 +1,18 @@
+site_name: My Homelab
+nav:
+  - Home: index.md
+  - Docker: docker.md
+  - Scripts: script.md
+  - Ansible: ansible.md
+  - Edge Router: edge.md
+
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: blue
+
+  features:
+    - navigation.tabs
+    - navigation.instant
