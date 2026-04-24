@@ -8,8 +8,9 @@ title: Home
 I run a self-hosted environment focused on automation, monitoring, and privacy.
 
 <div class="card">
-<h2>📄 Blog</h2>
+<h2>📝 Blog</h2>
 <ul>
+  <li><a href="/blog/">Blog</a></li>
   <li>Setup guides</li>
   <li>Knowlegde Base</li>
 </ul>
