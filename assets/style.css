@@ -36,6 +36,13 @@ body {
   color: #58a6ff;
 }
 
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #58a6ff;
+  letter-spacing: 0.5px;
+}
+
 /* CONTENT */
 .container {
   width: 90%;
