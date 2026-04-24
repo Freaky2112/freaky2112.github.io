@@ -1,3 +1,9 @@
 title: "My Homelab"
 description: "My Projects"
 markdown: kramdown
+
+
+collections:
+  posts:
+    output: true
+    
