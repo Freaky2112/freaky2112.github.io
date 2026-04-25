@@ -11,14 +11,6 @@
 
   <main class="container">
     {{ content }}
-    {% if page.layout == "post" %}
-  <p class="reading-time">
-    ⏱ 
-    {% assign words = content | number_of_words %}
-    {% assign minutes = words | divided_by: 200 | plus: 1 %}
-    {{ minutes }} min read
-  </p>
-{% endif %}
   </main>
 
 </body>
