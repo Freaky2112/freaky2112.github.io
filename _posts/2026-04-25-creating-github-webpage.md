@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Webpage"
 ---
 
-# How to create github webpage
+<p><h1 id="How to create github webpage">How to create github wepage</h1></p>
 
 ---
 Creating a GitHub webpage is basically using GitHub Pages, which lets you host a static site for free. I’ll walk you through the simplest way first, then a slightly more advanced option.
@@ -108,7 +108,7 @@ theme: jekyll-theme-cayman
 index.md
 
 Example:
-``` md
+``` markdown
 # 👋 Welcome
 
 I'm running a homelab with Docker.
@@ -285,7 +285,7 @@ h1 {
 ### 🏠 5. Homepage
 
 index.md
-``` md
+``` markdown
 ---
 layout: default
 title: Home
@@ -318,7 +318,7 @@ Source: main branch
 
 ## Create file for Projects
 /projects.md
-``` md
+``` markdown
 ---
 layout: default
 title: Projects
@@ -350,7 +350,7 @@ permalink: /projects/
 ## Create file for Docs
 
 /docs.md
-``` md
+``` markdown
 ---
 layout: default
 title: Docs
@@ -378,7 +378,7 @@ permalink: /docs/
 ```
 ## Create file for About
 /about.md
-``` md
+``` markdown
 ---
 layout: default
 title: About
@@ -404,7 +404,7 @@ I’m running a homelab focused on:
 ```
 ## Create file for blog posts
 /blog.md
-``` md
+``` markdown
 ---
 layout: default
 title: Blog 
@@ -425,7 +425,7 @@ permalink: /blog/
 
 create files in this format yyyy-mm-dd-description.md
 and inside file should look like this
-``` md
+``` markdown
 ---
 layout: post
 title: "Your Title"
@@ -445,7 +445,7 @@ your text here in md format
     <span class="logo">⚡ MyLab</span>
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/blogs/">Blog</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="/projects/">Projects</a></li>
       <li><a href="/docs/">Docs</a></li>
       <li><a href="/about/">About</a></li>

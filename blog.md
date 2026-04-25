@@ -10,6 +10,6 @@ permalink: /blog/
   <div class="card">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p>{{ post.date | date: "%B %d, %Y" }}</p>
-    <p>{{ post.excerpt }}</p>
+    <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
   </div>
 {% endfor %}
