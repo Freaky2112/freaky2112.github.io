@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# 👨‍💻 Welcome to My Homelab
+# ![Welcome to My Homelab](/assets/images/homelab.jpg) Welcome to My Homelab
 
 I run a self-hosted environment focused on automation, monitoring, and privacy.
 
@@ -29,4 +29,3 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
   <li>Setup guides</li>
   <li>Troubleshooting notes</li>
 </ul>
-</div>
