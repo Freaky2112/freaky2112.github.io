@@ -27,7 +27,7 @@ Create a file called:
 index.html
 
 Paste something simple:
-
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +38,7 @@ Paste something simple:
   <p>This is my GitHub Pages site!</p>
 </body>
 </html>
-
+```
 Commit the file.
 
 3. Enable GitHub Pages
