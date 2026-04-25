@@ -173,6 +173,7 @@ _layouts/default.html
 
 </body>
 </html>
+...
 ```
 
 ### 🧭 3. Navigation bar
