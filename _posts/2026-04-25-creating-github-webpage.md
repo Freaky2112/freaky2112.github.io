@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Webpage"
 ---
 
-<p><h1 id="How to create github webpage">How to create github wepage</h1></p>
+# How to create github webpage
 
 ---
 Creating a GitHub webpage is basically using GitHub Pages, which lets you host a static site for free. I’ll walk you through the simplest way first, then a slightly more advanced option.
@@ -108,7 +108,7 @@ theme: jekyll-theme-cayman
 index.md
 
 Example:
-``` markdown
+```Markdown
 # 👋 Welcome
 
 I'm running a homelab with Docker.
@@ -142,7 +142,7 @@ _posts
 ### ⚙️ 1. config file
 
 _config.yml
-``` yaml
+```yaml
 title: "My Homelab"
 description: "Docker, Monitoring, and Projects"
 markdown: kramdown
@@ -155,7 +155,7 @@ collections:
 ### 🧱 2. Layout (main template)
 
 _layouts/default.html
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,7 +179,7 @@ _layouts/default.html
 ### 🧭 3. Navigation bar
 
 _includes/nav.html
-``` html
+```html
 <nav class="nav">
   <div class="nav-container">
     <span class="logo">⚡ MyLab</span>
@@ -196,7 +196,7 @@ _includes/nav.html
 ### 🎨 4. Dark mode styling
 
 /assets/style.css
-``` css
+```css
 
 body {
   margin: 0;
@@ -285,7 +285,7 @@ h1 {
 ### 🏠 5. Homepage
 
 index.md
-``` markdown
+```Markdown
 ---
 layout: default
 title: Home
@@ -318,7 +318,7 @@ Source: main branch
 
 ## Create file for Projects
 /projects.md
-``` markdown
+```Markdown
 ---
 layout: default
 title: Projects
@@ -350,7 +350,7 @@ permalink: /projects/
 ## Create file for Docs
 
 /docs.md
-``` markdown
+```Markdown
 ---
 layout: default
 title: Docs
@@ -378,7 +378,7 @@ permalink: /docs/
 ```
 ## Create file for About
 /about.md
-``` markdown
+```Markdown
 ---
 layout: default
 title: About
@@ -404,7 +404,7 @@ I’m running a homelab focused on:
 ```
 ## Create file for blog posts
 /blog.md
-``` markdown
+```Markdown
 ---
 layout: default
 title: Blog 
@@ -425,7 +425,7 @@ permalink: /blog/
 
 create files in this format yyyy-mm-dd-description.md
 and inside file should look like this
-``` markdown
+```Markdown
 ---
 layout: post
 title: "Your Title"
@@ -439,7 +439,7 @@ your text here in md format
 
 ## update Navigation
 /_includes/nav.html
-``` html
+```html
 <nav class="nav">
   <div class="nav-container">
     <span class="logo">⚡ MyLab</span>
