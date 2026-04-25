@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dockedr you Must Install"
+title: "Docker you Must Install"
 ---
 
 #  Docker list
@@ -122,9 +122,9 @@ networks: {}
 ```
 don't fogot your .env file with all your secrets
 
-User=
-DB_name=
-DB_Password=
+User= \
+DB_name= \
+DB_Password= \
 DB_Root_Password=
 
 ---
@@ -243,6 +243,7 @@ volumes:
   redisdata: null
 ```
 
+---
 ### Uptime-Kuma
 ```yml
 services:
