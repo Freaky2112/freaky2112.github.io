@@ -36,13 +36,6 @@ body {
   color: #58a6ff;
 }
 
-/*.logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #4704c2 !important;
-  letter-spacing: 0.5px;
-} */
-
 /* CONTENT */
 .container {
   width: 90%;
@@ -95,10 +88,19 @@ h1 {
   gap: 10px; /* space between image and text */
   font-size: 1.4rem;
   font-weight: 700;
+  color: #4704c2 !important;
+  letter-spacing: 0.5px;
 }
 
 .logo-img {
-  height: 40px;   /* control size */
+  height: 80px;   /* control size */
   width: auto;
   border-radius: 6px; /* optional nice look */
 }
+
+/*.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #4704c2 !important;
+  letter-spacing: 0.5px;
+} */
