@@ -127,7 +127,7 @@ Source: main branch
 
 Done.
 
-📁 File structure
+### 📁 File structure
 
 Create these files in your repo:
 
@@ -139,7 +139,7 @@ Create these files in your repo:
 _config.yml
 _posts
 
-⚙️ 1. config file
+### ⚙️ 1. config file
 
 _config.yml
 ``` yaml
@@ -152,7 +152,7 @@ collections:
     output: true
 ```
 
-🧱 2. Layout (main template)
+### 🧱 2. Layout (main template)
 
 _layouts/default.html
 ``` html
@@ -175,7 +175,7 @@ _layouts/default.html
 </html>
 ```
 
-🧭 3. Navigation bar
+### 🧭 3. Navigation bar
 
 _includes/nav.html
 ``` html
@@ -192,7 +192,7 @@ _includes/nav.html
 </nav>
 ```
 
-🎨 4. Dark mode styling
+### 🎨 4. Dark mode styling
 
 /assets/style.css
 ``` css
@@ -281,7 +281,7 @@ h1 {
 }
 ```
 
-🏠 5. Homepage
+### 🏠 5. Homepage
 
 index.md
 ``` md
@@ -311,7 +311,7 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 </div>
 ```
 
-🚀 6. Enable GitHub Pages
+### 🚀 6. Enable GitHub Pages
 Go to Settings → Pages
 Source: main branch
 
