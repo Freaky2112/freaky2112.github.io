@@ -439,7 +439,7 @@ FOR_LOOP_HERE
 ```
 
 > **Note:** In your actual `blog.md` file, replace `FOR_LOOP_HERE` with the real Liquid loop:
-> ```
+> ```html
 > {% for post in site.posts %}
 >   <div class="card">
 >     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
