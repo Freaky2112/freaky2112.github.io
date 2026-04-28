@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "GitHub Webpage"
+permalink: /docs/github-webpage/
 ---
 
 # How to create github webpage
