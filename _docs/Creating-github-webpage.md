@@ -6,27 +6,22 @@ permalink: /docs/github-webpage/
 
 # How to create github webpage
 
----
-Creating a GitHub webpage is basically using GitHub Pages, which lets you host a static site for free. I’ll walk you through the simplest way first, then a slightly more advanced option.
+Creating a GitHub webpage is basically using GitHub Pages, which lets you host a static site for free. I'll walk you through the simplest way first, then a slightly more advanced option.
+
 ---
 
 ## Option 1 — Quick setup (no coding needed)
-1. Create a repository
-Go to GitHub
-Click New repository
 
+1. Create a repository — Go to GitHub, click **New repository** and name it:
 
+```
 yourusername.github.io
+```
 
-(replace yourusername with your GitHub username)
+(replace `yourusername` with your GitHub username)
 
-2. Add an index file
+2. Add an index file — Create a file called `index.html` and paste something simple:
 
-Create a file called:
-
-index.html
-
-Paste something simple:
 ```html
 <!DOCTYPE html>
 <html>
@@ -39,32 +34,24 @@ Paste something simple:
 </body>
 </html>
 ```
+
 Commit the file.
 
-3. Enable GitHub Pages
-Go to Settings → Pages
-Under Source, select:
-Branch: main
-Folder: / (root)
-Save
-4. Access your site
+3. Enable GitHub Pages — Go to **Settings → Pages**, under Source select: Branch: `main`, Folder: `/ (root)`, then Save.
 
-After ~30 seconds to 2 minutes, your site will be live at:
+4. Access your site — after ~30 seconds to 2 minutes, your site will be live at:
 
+```
 https://yourusername.github.io
+```
 
 ---
 
 ## Option 2 — Use Markdown (easier for docs/blogs)
 
-Instead of HTML, you can use Markdown with Jekyll (built-in).
+Instead of HTML, you can use Markdown with Jekyll (built-in). Create `index.md`:
 
-Create:
-
-index.md
-
-Example:
-
+```markdown
 ### My Website
 
 Welcome to my GitHub page!
@@ -72,43 +59,42 @@ Welcome to my GitHub page!
 - 🚀 Projects
 - 📄 Notes
 - 🧠 Ideas
+```
 
 GitHub automatically converts it into a styled site.
 
-🎨 Optional: Choose a theme
+**🎨 Optional:** In **Settings → Pages → Theme**, you can pick a ready-made design without coding.
 
-In Settings → Pages → Theme, you can pick a ready-made design without coding.
+**🔧 Pro tips:**
+- Use folders like `/projects` to organize pages
+- Add a `README.md` for repo info
+- Use a custom domain later if you want (like `mydomain.com`)
 
-🔧 Pro tips
-Use folders like /projects to organize pages
-Add a README.md for repo info
-Use a custom domain later if you want (like mydomain.com)
-If you want next step
+---
 
+## 🚀 Easiest way (no cloning templates manually)
 
-🚀 Easiest way (no cloning templates manually)
-1. Create your repo
+### 1. Create your repo
 
-Same as before:
-
+```
 yourusername.github.io
-2. Add a config file
+```
 
-Create:
+### 2. Add a config file
 
-_config.yml
+Create `_config.yml` and paste ONE of these:
 
-Paste ONE of these:
-
-Option A (simple clean)
+```yaml
+# Option A (simple clean)
 theme: minima
-Option B (nicer look)
-theme: jekyll-theme-cayman
-3. Create homepage
-index.md
 
-Example:
-```Markdown
+# Option B (nicer look)
+theme: jekyll-theme-cayman
+```
+
+### 3. Create homepage `index.md`
+
+```markdown
 # 👋 Welcome
 
 I'm running a homelab with Docker.
@@ -121,63 +107,75 @@ I'm running a homelab with Docker.
 - Setup guides
 - Notes
 ```
-4. Enable Pages
-Settings → Pages
-Source: main branch
 
-Done.
+### 4. Enable Pages
 
-### 📁 File structure
+**Settings → Pages** → Source: main branch. Done.
+
+---
+
+## 📁 File structure
 
 Create these files in your repo:
 
+```
 /_config.yml
 /index.md
 /_layouts/default.html
 /_includes/nav.html
 /assets/style.css
-_config.yml
-_posts
+/_posts/
+```
 
-### ⚙️ 1. config file
+---
 
-_config.yml
+## ⚙️ 1. Config file
+
+`_config.yml`
+
 ```yaml
 title: "My Homelab"
 description: "Docker, Monitoring, and Projects"
 markdown: kramdown
 
-collections:
-  posts:
-    output: true
+excerpt_separator: "<!--more-->"
 ```
 
-### 🧱 2. Layout (main template)
+---
 
-_layouts/default.html
+## 🧱 2. Layout (main template)
+
+`_layouts/default.html`
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} - {{ site.title }}</title>
+  <title>PAGE_TITLE - SITE_TITLE</title>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-  {% include nav.html %}
+  {% raw %}{% include nav.html %}{% endraw %}
 
   <main class="container">
-    {{ content }}
+    {% raw %}{{ content }}{% endraw %}
   </main>
 
 </body>
 </html>
 ```
 
-### 🧭 3. Navigation bar
+> **Note:** Replace `PAGE_TITLE` and `SITE_TITLE` with the actual Liquid variables in your real file:
+> `{{ page.title }}` and `{{ site.title }}`
 
-_includes/nav.html
+---
+
+## 🧭 3. Navigation bar
+
+`_includes/nav.html`
+
 ```html
 <nav class="nav">
   <div class="nav-container">
@@ -192,11 +190,13 @@ _includes/nav.html
 </nav>
 ```
 
-### 🎨 4. Dark mode styling
+---
 
-/assets/style.css
+## 🎨 4. Dark mode styling
+
+`/assets/style.css`
+
 ```css
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -281,10 +281,13 @@ h1 {
 }
 ```
 
-### 🏠 5. Homepage
+---
 
-index.md
-```Markdown
+## 🏠 5. Homepage
+
+`index.md`
+
+```markdown
 ---
 layout: default
 title: Home
@@ -311,13 +314,19 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 </div>
 ```
 
-### 🚀 6. Enable GitHub Pages
-Go to Settings → Pages
-Source: main branch
+---
+
+## 🚀 6. Enable GitHub Pages
+
+Go to **Settings → Pages** → Source: main branch.
+
+---
 
 ## Create file for Projects
-/projects.md
-```Markdown
+
+`/projects.md`
+
+```markdown
 ---
 layout: default
 title: Projects
@@ -346,10 +355,14 @@ permalink: /projects/
 </ul>
 </div>
 ```
+
+---
+
 ## Create file for Docs
 
-/docs.md
-```Markdown
+`/docs.md`
+
+```markdown
 ---
 layout: default
 title: Docs
@@ -375,9 +388,14 @@ permalink: /docs/
 </ul>
 </div>
 ```
+
+---
+
 ## Create file for About
-/about.md
-```Markdown
+
+`/about.md`
+
+```markdown
 ---
 layout: default
 title: About
@@ -386,7 +404,7 @@ permalink: /about/
 
 # 👋 About Me
 
-I’m running a homelab focused on:
+I'm running a homelab focused on:
 
 - 🐳 Docker & self-hosting  
 - 📊 Monitoring (Grafana, Loki)  
@@ -401,30 +419,45 @@ I’m running a homelab focused on:
 </ul>
 </div>
 ```
-## Create file for blog posts
-/blog.md
-```Markdown
+
+---
+
+## Create file for Blog
+
+`/blog.md`
+
+```markdown
 ---
 layout: default
-title: Blog 
+title: Blog
 permalink: /blog/
 ---
 
-# 📝 Blog / Knoweledge Base
+# 📝 Blog / Knowledge Base
 
-{% for post in site.posts %}
-  <div class="card">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p>{{ post.date | date: "%B %d, %Y" }}</p>
-    <p>{{ post.excerpt }}</p>
-  </div>
-{% endfor %}
+FOR_LOOP_HERE
 ```
-/_posts
 
-create files in this format yyyy-mm-dd-description.md
-and inside file should look like this
-```Markdown
+> **Note:** In your actual `blog.md` file, replace `FOR_LOOP_HERE` with the real Liquid loop:
+> ```
+> {% for post in site.posts %}
+>   <div class="card">
+>     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+>     <p>{{ post.date | date: "%B %d, %Y" }}</p>
+>     <p>{{ post.excerpt }}</p>
+>   </div>
+> {% endfor %}
+> ```
+
+---
+
+## `/_posts`
+
+Create files in this format: `yyyy-mm-dd-description.md`
+
+Each file should start with:
+
+```markdown
 ---
 layout: post
 title: "Your Title"
@@ -432,12 +465,17 @@ title: "Your Title"
 
 # Header of your post
 
-your text here in md format
-
+Your text here in md format.
 ```
 
-## update Navigation
-/_includes/nav.html
+Add `<!--more-->` where you want the excerpt to cut off on the blog listing page.
+
+---
+
+## Update Navigation
+
+`/_includes/nav.html`
+
 ```html
 <nav class="nav">
   <div class="nav-container">
@@ -453,38 +491,29 @@ your text here in md format
 </nav>
 ```
 
-## Adding reading time
+---
 
-/_layouts/default.html
-```html
-{% if page.layout == "post" %}
-  <p class="reading-time">
-    ⏱ 
-    {% assign words = content | number_of_words %}
-    {% assign minutes = words | divided_by: 200 | plus: 1 %}
-    {{ minutes }} min read
-  </p>
-{% endif %}
-```
 ## Add it to Posts only
-/_layouts/post.html
+
+`/_layouts/post.html`
+
 ```html
 ---
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+PAGE_TITLE
+POST_DATE
 
-<p class="reading-time">
-  ⏱ 
-  {% assign words = content | number_of_words %}
-  {% assign minutes = words | divided_by: 200 | plus: 1 %}
-  {{ minutes }} min read
-</p>
+READING_TIME_HERE
 
-{{ content }}
+PAGE_CONTENT
 ```
-now change your layout in your post
-form layout: default 
-to layout: post
+
+> **Note:** In your actual `post.html` file use the real Liquid variables:
+> - `{{ page.title }}` inside an `<h1>` tag
+> - `{{ page.date | date: "%B %d, %Y" }}` inside `<p class="post-date">`
+> - The reading time assign block
+> - `{{ content }}`
+
+Now change your layout in your posts from `layout: default` to `layout: post`.
