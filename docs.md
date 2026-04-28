@@ -6,19 +6,8 @@ permalink: /docs/
 
 # 📄 Documentation
 
-<div class="card">
-<h2><a href="{{ docs.url }}">🛠 Setup Guides</a></h2>
-<ul>
-  <li>Create This Webpage </li>
-  <li>Install Docker stack</li>
-  <li>Edge Router Config</li>
-  <li>Configure reverse proxy</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>🧠 Notes</h2>
-<ul>
-  <li>Commands & cheatsheets</li>
-</ul>
-</div>
+{% for docs in site.docs %}
+  <h2>{{ docs.title }}</h2>
+  <p>{{ docs.excerpt }}</p>
+  <a href="{{ docs.url }}">Read more</a>
+{% endfor %}
