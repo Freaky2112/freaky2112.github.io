@@ -124,7 +124,7 @@ don't fogot your .env file with all your secrets
 
 User= \
 DB_name= \
-DB_Password= \
+DB_Password=\
 DB_Root_Password=
 
 ---
@@ -161,13 +161,13 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik.entrypoints=http"
-      - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.local.networkeclipse.com`)"
+      - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.local.exemple.com`)"
       - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_DASHBOARD_CREDENTIALS}"
       - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
       - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
       - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
       - "traefik.http.routers.traefik-secure.entrypoints=https"
-      - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.local.networkeclipse.com`)"
+      - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.local.exemple.com`)"
       - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
       - "traefik.http.routers.traefik-secure.tls=true"
       - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
