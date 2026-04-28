@@ -9,5 +9,5 @@ permalink: /docs/
 {% for docs in site.docs %}
   <h2>{{ docs.title }}</h2>
   <p>{{ docs.excerpt }}</p>
-  <a href="{{ docs.url }}">Read more</a>
+  <a href="{{ docs.url }}">{{ post.title }}</a>
 {% endfor %}
