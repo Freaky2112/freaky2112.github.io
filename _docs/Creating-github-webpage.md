@@ -508,7 +508,7 @@ READING_TIME_HERE
 
 PAGE_CONTENT
 ```
-```html
+```text 
 > **Note:** In your actual `post.html` file use the real Liquid variables:
 > - `{{ page.title }}` inside an `<h1>` tag
 > - `{{ page.date | date: "%B %d, %Y" }}` inside `<p class="post-date">`
