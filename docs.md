@@ -7,8 +7,9 @@ permalink: /docs/
 # 📄 Documentation
 
 <div class="card">
-<h2>🛠 Setup Guides</h2>
+<h2><a href="{{ docs.url }}">🛠 Setup Guides</a></h2>
 <ul>
+  <li>Create This Webpage </li>
   <li>Install Docker stack</li>
   <li>Edge Router Config</li>
   <li>Configure reverse proxy</li>
