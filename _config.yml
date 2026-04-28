@@ -4,6 +4,8 @@ markdown: kramdown
 
 
 collections:
-  posts:
+  posts:  # Blogs section
+    output: true
+  docs: # all docs files...
     output: true
     
