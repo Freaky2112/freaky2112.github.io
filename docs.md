@@ -8,8 +8,8 @@ permalink: /docs/
 
 {% for docs in site.docs %}
   <div class="card">
-    <h2>{{ docs.title }}</h2>
+    <h2><a href="{{ docs.url }}">{{ docs.title }}</a>{{ docs.title }}</h2>
     <p>{{ docs.excerpt }}</p>
-    <a href="{{ docs.url }}">{{ docs.title }}</a>
+    <p>{{ docs.excerpt | strip_html | truncate: 120 }}</p>
   </div>
 {% endfor %}
