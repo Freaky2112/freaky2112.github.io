@@ -5,9 +5,9 @@ permalink: /docs/traefik/
 ---
 
 ### Traefik
-
-1. Your dockercompose.yml 
-
+```shell
+dockercompose.yml 
+```
 ```yml
 ---
 services:
@@ -62,24 +62,25 @@ networks:
   proxy:
     external: true
 ```
-2. don't fogot your .env file with all your secrets
 
+### Don't fogot your .env file with all your secrets
+
+```shell
 .env
 
 TRAEFIK_DASHBOARD_CREDENTIALS=username:base64password
 
----
-3. put your token in your cf_api_token.txt
+put your token in your cf_api_token.txt
 
 your_api_token
 
-4. in /data create a acme.json file for your certificate
+in /data create a acme.json file for your certificate
 
-```bash
 touch acme.json
 ```
-
-5. in /data create a traefik.yml file
+```Shell
+In /data create a traefik.yml file
+```
 
 ```yaml
 api:
@@ -118,13 +119,13 @@ certificatesResolvers:
           - "1.1.1.1:53"
           - "1.0.0.1:53"
 ```
+```shell
+When everyting is good don't forget to change your caServer to prod.
 
-6. when everyting is good don't forget to change your caServer to prod.
+add your a record or cname to your local DNS
 
-7. add your a record or cname to your local DNS
-
-8. add your /data/config.yml for your outside docker application
- 
+add your /data/config.yml for your outside docker application
+``` 
 ```yaml
  http:
  #region routers
