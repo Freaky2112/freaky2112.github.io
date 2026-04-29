@@ -18,10 +18,11 @@ permalink: /projects/scripts/
    - Sudo Prompt
    - Cleanup Temp
    - Tmux
-
+<br>
+<br>
 2. Python Scripts
    - Auto Scan 
----
 
+---
 ## Scripts
 📜 Go to the [Scripts](https://github.com/Freaky2112/Scripts) page
