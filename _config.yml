@@ -8,4 +8,6 @@ collections:
     output: true
   docs: # all docs files...
     output: true
+  porjects: # Links to repo projects
+    output: true
     
