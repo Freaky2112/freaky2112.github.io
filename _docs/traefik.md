@@ -5,7 +5,9 @@ permalink: /docs/traefik/
 ---
 
 ### Traefik
-dockercompose.yml
+
+1. Your dockercompose.yml 
+
 ```yml
 ---
 services:
@@ -60,14 +62,244 @@ networks:
   proxy:
     external: true
 ```
-don't fogot your .env file with all your secrets
+2. don't fogot your .env file with all your secrets
 
 .env
 
 TRAEFIK_DASHBOARD_CREDENTIALS=username:base64password
 
 ---
-cf_api_token.txt
+3. put your token in your cf_api_token.txt
 
 your_api_token
+
+4. in /data create a acme.json file for your certificate 
+
+touch acme.json
+
+5. in /data create a traefik.yml file
+```yaml
+api:
+  dashboard: true
+  debug: true
+entryPoints:
+  http:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: https
+          scheme: https
+  https:
+    address: ":443"
+serversTransport:
+  insecureSkipVerify: true
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+   file:
+     filename: /config.yml
+certificatesResolvers:
+  cloudflare:
+    acme:
+      email: youremail@email.com # to change
+      storage: acme.json
+      # caServer: https://acme-v02.api.letsencrypt.org/directory # prod (default)
+      caServer: https://acme-staging-v02.api.letsencrypt.org/directory # staging
+      dnsChallenge:
+        provider: cloudflare
+        #disablePropagationCheck: true # uncomment this if you have issues pulling certificates through cloudflare, By setting this flag to true disables the need to wait for the propagation of the TXT record to all authoritative name servers.
+        #delayBeforeCheck: 60s # uncomment along with disablePropagationCheck if needed to ensure the TXT record is ready before verification is attempted
+        resolvers:
+          - "1.1.1.1:53"
+          - "1.0.0.1:53"
+```
+
+6. when everyting is good don't forget to change your caServer to prod.
+
+7. add your a record or cname to your local DNS
+
+8. add your /data/config.yml for your outside docker application
+```yaml
+ http:
+ #region routers
+  routers:
+    proxmox:
+      entryPoints:
+        - "https"
+      rule: "Host(`proxmox.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: proxmox
+    pihole:
+      entryPoints:
+        - "https"
+      rule: "Host(`pihole.local.example.com`)"
+      middlewares:
+        - redirectregex-pihole
+        - default-headers
+        - addprefix-pihole
+        - https-redirectscheme
+      tls: {}
+      service: pihole
+    homebridge:
+      entryPoints:
+        - "https"
+      rule: "Host(`homebridge.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: homebridge
+    homeassistant:
+      # For Homeassistant config, check: https://www.home-assistant.io/integrations/http/#reverse-proxies
+      # This relies on Homeassistant using http. No certs are needed in the Homeassistant config.
+      entryPoints:
+        - "https"
+      rule: "Host(`homeassistant.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: homeassistant
+    syncthing:
+      entryPoints:
+        - "https"
+      rule: "Host(`syncthing.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: syncthing
+    truenas:
+      entryPoints:
+        - "https"
+      rule: "Host(`truenas.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: truenas
+    plex:
+      entryPoints:
+        - "https"
+      rule: "Host(`plex.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: plex
+    opnsense:
+      entryPoints:
+        - "https"
+      rule: "Host(`opnsense.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: opnsense
+    openmediavault:
+      entryPoints:
+        - "https"
+      rule: "Host(`openmediavault.local.example.com`)"
+      middlewares:
+        - default-headers
+        - https-redirectscheme
+      tls: {}
+      service: openmediavault
+
+#endregion
+#region services
+  services:
+    proxmox:
+      loadBalancer:
+        servers:
+          - url: "https://192.168.0.100:8006"
+        passHostHeader: true
+    pihole:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.0.101:80"
+        passHostHeader: true
+    homebridge:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.0.102:10999"
+        passHostHeader: true
+    homeassistant:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.0.102:10999"
+        passHostHeader: true
+    syncthing:
+      loadBalancer:
+        servers:
+          - url: "https://192.168.0.103:8384"
+        passHostHeader: true
+    truenas:
+      loadBalancer:
+        servers:
+          - url: "https://192.168.0.104"
+        passHostHeader: true
+    plex:
+      loadBalancer:
+        servers:
+          - url: "https://192.168.0.105:32400"
+        passHostHeader: true
+    opnsense:
+      loadBalancer:
+        servers:
+          - url: "https://192.168.0.109"
+        passHostHeader: true
+    openmediavault:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.0.111:80"
+        passHostHeader: true
+#endregion
+  middlewares:
+    addprefix-pihole:
+      addPrefix:
+        prefix: "/admin"
+    https-redirectscheme:
+      redirectScheme:
+        scheme: https
+        permanent: true
+    redirectregex-pihole:
+      redirectRegex:
+        regex: "/admin/(.*)"
+        replacement: /
+
+    default-headers:
+      headers:
+        frameDeny: true
+        browserXssFilter: true
+        contentTypeNosniff: true
+        forceSTSHeader: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 15552000
+        customFrameOptionsValue: SAMEORIGIN
+        customRequestHeaders:
+          X-Forwarded-Proto: https
+
+
+    default-whitelist:
+      ipAllowList:
+        sourceRange:
+        - "10.0.0.0/8"
+        - "192.168.0.0/16"
+        - "172.16.0.0/12"
+
+    secured:
+      chain:
+        middlewares:
+        - default-whitelist
+        - default-headers
+```
+
+   
 

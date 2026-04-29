@@ -5,7 +5,9 @@ permalink: /docs/npm/
 ---
 
 ### NPM
-dockercompose.yml
+
+1. Your dockercompose.yml 
+   
 ```yml
 services:
   app:
@@ -45,7 +47,7 @@ services:
       - ./mysql:/var/lib/mysql
 networks: {}
 ```
-don't fogot your .env file with all your secrets
+2. don't fogot your .env file with all your secrets
 
 .env
 
