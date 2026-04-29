@@ -6,14 +6,17 @@ permalink: /projects/
 
 # Projects
 
-## Scripts
-📜 Go to the [Scripts](https://github.com/Freaky2112/Scripts) page
+{% for projects in site.projects %}
+  <div class="card">
+    <h2><a href="{{projects.url}}">{{projects.title}}</a></h2>
+    <p>{{ projects.excerpt | strip_html | truncate: 120 }}</p>
+  </div>
+{% endfor %}
 
-## Services
-🧰 Go to the [Services](service.md) page
 
-## Docker
-🐳 Go to the [Docker](https://github.com/Freaky2112/Docker_template) page
+
+
+
 
 ## Edge Router
 🔀 Go to the [Edge Router](https://github.com/Freaky2112/Edge_Router-) page
