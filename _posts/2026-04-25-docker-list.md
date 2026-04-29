@@ -18,26 +18,6 @@ title: "Docker you Must Install"
 * Uptime Kuma
   
 
----
-### CloudFlare-DDNS
-```yml
----
-services:
-  cloudflare-ddns:
-    image: oznu/cloudflare-ddns:latest
-    container_name: cloudflare-ddns
-    restart: always
-    environment:
-      - EMAIL=youremail@domain.com
-      - API_KEY=${API_KEY}
-      - ZONE=yourdomain
-      # - SUBDOMAIN=subdomain
-      - PROXIED=true
-      - RRTYPE=A
-```
-don't fogot your .env file with all your secrets
-
-API_KEY=
 
 ---
 ### Dokuwiki

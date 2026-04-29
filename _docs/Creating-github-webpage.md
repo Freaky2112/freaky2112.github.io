@@ -496,7 +496,7 @@ Add `<!--more-->` where you want the excerpt to cut off on the blog listing page
 
 `/_layouts/post.html`
 
-```text
+```html
 layout: default
 ---
 
@@ -506,7 +506,8 @@ POST_DATE
 READING_TIME_HERE
 
 PAGE_CONTENT
- 
+```
+
 > **Note:** In your actual `post.html` file use the real Liquid variables:
 > - `{{ page.title }}` inside an `<h1>` tag
 > - `{{ page.date | date: "%B %d, %Y" }}` inside `<p class="post-date">`
@@ -514,4 +515,3 @@ PAGE_CONTENT
 > - `{{ content }}`
 
 Now change your layout in your posts from `layout: default` to `layout: post`.
-```
