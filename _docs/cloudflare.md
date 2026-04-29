@@ -6,6 +6,9 @@ permalink: /docs/cloudflare/
 
 ---
 ### CloudFlare-DDNS
+
+1. Your dockercompose.yml 
+   
 ```yml
 ---
 services:
@@ -21,6 +24,6 @@ services:
       - PROXIED=true
       - RRTYPE=A
 ```
-don't fogot your .env file with all your secrets
+2. don't fogot your .env file with all your secrets
 
 API_KEY=your_api_key
