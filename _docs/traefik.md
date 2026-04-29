@@ -5,6 +5,7 @@ permalink: /docs/traefik/
 ---
 
 ### Traefik
+dockercompose.yml
 ```yml
 ---
 services:
@@ -59,3 +60,14 @@ networks:
   proxy:
     external: true
 ```
+don't fogot your .env file with all your secrets
+
+.env
+
+TRAEFIK_DASHBOARD_CREDENTIALS=username:base64password
+
+---
+cf_api_token.txt
+
+your_api_token
+

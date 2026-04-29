@@ -5,6 +5,7 @@ permalink: /docs/npm/
 ---
 
 ### NPM
+dockercompose.yml
 ```yml
 services:
   app:
@@ -45,6 +46,8 @@ services:
 networks: {}
 ```
 don't fogot your .env file with all your secrets
+
+.env
 
 User= \
 DB_name= \
