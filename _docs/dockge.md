@@ -5,8 +5,8 @@ permalink: /docs/dockge/
 ---
 
 ### Dockge
----
-dockercompose.yml
+
+1. dockercompose.yml
 
 ```yml
 ---
