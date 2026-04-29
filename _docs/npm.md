@@ -5,9 +5,9 @@ permalink: /docs/npm/
 ---
 
 ### NPM
-```shell
+
 Your dockercompose.yml 
-```   
+
 ```yml
 services:
   app:

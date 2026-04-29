@@ -5,9 +5,9 @@ permalink: /docs/dockge/
 ---
 
 ### Dockge
-```shell
+
 Your dockercompose.yml 
-```
+
 ```yml
 ---
 services:

@@ -5,9 +5,9 @@ permalink: /docs/dokuwiki/
 ---
 
 ### Dokuwiki
-```Shell
+
 Your dockercompose.yml 
-```   
+
 ```yml
 ---
 services:

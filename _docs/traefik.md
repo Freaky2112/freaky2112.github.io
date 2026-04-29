@@ -5,9 +5,9 @@ permalink: /docs/traefik/
 ---
 
 ### Traefik
-```shell
+
 dockercompose.yml 
-```
+
 ```yml
 ---
 services:

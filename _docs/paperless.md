@@ -5,9 +5,9 @@ permalink: /docs/paperless/
 ---
 
 ### Paperless:
-```shell
+
 Your dockercompose.yml 
-```   
+ 
 ```yml
 services:
   broker:
