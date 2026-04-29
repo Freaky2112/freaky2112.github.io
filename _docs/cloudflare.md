@@ -6,9 +6,9 @@ permalink: /docs/docker/cloudflare/
 
 ---
 ### CloudFlare-DDNS
-```shell
+
  Your dockercompose.yml 
-```   
+
 ```yml
 ---
 services:
