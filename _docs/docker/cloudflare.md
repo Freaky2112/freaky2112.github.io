@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "CloudFlare"
-permalink: /docs/cloudflare/
+permalink: /docs/docker/cloudflare/
 ---
 
 ---
