@@ -5,9 +5,9 @@ permalink: /docs/homer/
 ---
 
 ### Homer Dashboard
-
-1. Your dockercompose.yml 
-   
+```shell
+Your dockercompose.yml 
+```   
 ```yml
 ---
 services:

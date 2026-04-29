@@ -5,9 +5,9 @@ permalink: /docs/uptimekuma/
 ---
 
 ### Uptime-Kuma
-
-1. Your dockercompose.yml 
-
+```shell
+Your dockercompose.yml 
+```
 ```yml
 services:
   uptime-kuma:
