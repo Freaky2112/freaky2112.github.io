@@ -14,8 +14,9 @@ permalink: /projects/dockers/
    - Traefik
    - Nginx Proxy Manager
    - Dockge
-   - Uptinme Kuma
-
+   - Uptinme Kuma 
+<br>
+<br>
 2. Other Docker
    - Webtop
    - Youtube-dl
