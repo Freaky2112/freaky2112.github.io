@@ -8,36 +8,16 @@ title: "Docker you Must Install"
 
 ## Must Install:
 
-* CloudFlare-DDNS
-* Dokuwiki
-* Homer
-* Traefik (reverse proxy)
-* Nginx Proxy Manager (reverse proxy)
-* Paperless
-* Dockge
-* Uptime Kuma
+* <a href="/docs/cloudflare">CloudFlare-DDNS</a>
+* <a href="/docs/dokuwiki">Dokuwiki</a>
+* <a href="/docs/homer">Homer</a>
+* <a href="/docs/traefik">Traefik (reverse proxy)</a>
+* <a href="/docs/npm">Nginx Proxy Manager (reverse proxy)</a>
+* <a href="/docs/paperless">Paperless</a>
+* <a href="/docs/dockge">Dockge</a>
+* <a href="/docs/uptimekuma">Uptime Kuma</a>
   
 
-
----
-### Dokuwiki
-```yml
----
-services:
-  dokuwiki:
-    image: lscr.io/linuxserver/dokuwiki:latest
-    container_name: dokuwiki
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/New_York
-    volumes:
-      - ./config:/config
-    ports:
-      - 18080:80
-      - 18443:443 #optional
-    restart: unless-stopped
-```
 
 ---
 ### Homer Dashboard
