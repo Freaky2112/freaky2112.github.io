@@ -73,11 +73,14 @@ TRAEFIK_DASHBOARD_CREDENTIALS=username:base64password
 
 your_api_token
 
-4. in /data create a acme.json file for your certificate 
+4. in /data create a acme.json file for your certificate
 
+```bash
 touch acme.json
+```
 
 5. in /data create a traefik.yml file
+
 ```yaml
 api:
   dashboard: true
@@ -121,6 +124,7 @@ certificatesResolvers:
 7. add your a record or cname to your local DNS
 
 8. add your /data/config.yml for your outside docker application
+ 
 ```yaml
  http:
  #region routers
