@@ -43,4 +43,4 @@ Outside of work, I run a **homelab** where I break things on purpose
 
 ---
 
-*Always learning. Always tinkering.*
+*Always learning. Always tinkering. Always Fixing :)*
