@@ -6,7 +6,7 @@ permalink: /about/
 
 # Hi, I'm Freaky 👋
 
-**Telecom Tech · Ex-IT · Linux Enthusiast**
+## **Telecom Tech · Ex-IT · Linux Enthusiast**
 
 ---
 
