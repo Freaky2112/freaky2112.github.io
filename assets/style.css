@@ -99,7 +99,10 @@ h1 {
 }
 
 .logo-text {
-  background: linear-gradient(90deg, #0ae440, #58a6ff);
+  font-size: 2rem;
+  font-weight: 900;
+
+  background: linear-gradient(90deg, #38015c, #00326b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
