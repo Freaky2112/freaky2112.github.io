@@ -86,8 +86,6 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px; /* space between image and text */
-  font-size: 1.4rem;
-  font-weight: 700;
   color: #4704c2 !important;
   letter-spacing: 0.5px;
 }
@@ -99,7 +97,7 @@ h1 {
 }
 
 .logo-text {
-  font-size: 2rem;
+  font-size: larger;
   font-weight: 900;
 
   background: linear-gradient(90deg, #38015c, #00326b);
