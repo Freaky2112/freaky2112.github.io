@@ -8,6 +8,41 @@ body {
 /* NAVBAR */
 .nav {
   background: #161b22;
+  border-right: 1px solid #30363d;
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #c9d1d9;
+  font-size: 1rem;
+}
+
+.nav a:hover {
+  color: #58a6ff;
+}
 
 /* CONTENT */
 .container {
