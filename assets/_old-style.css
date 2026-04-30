@@ -8,6 +8,33 @@ body {
 /* NAVBAR */
 .nav {
   background: #161b22;
+  padding: 10px 0;
+  border-bottom: 1px solid #30363d;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #c9d1d9;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #58a6ff;
+}
 
 /* CONTENT */
 .container {
