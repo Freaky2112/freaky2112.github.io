@@ -33,7 +33,7 @@ title: "Proxmox Template"
   qm importdisk 900 ubuntu-26.04.qcow2 local-lvm
   ```
 
-  ### Create a vm 
+### Create a vm 
   
   General -> give a name and for ID put something big so its always a the bottom
   OS -> don't use any media
@@ -44,7 +44,7 @@ title: "Proxmox Template"
   Network -> chose a bridge
   Finish
 
-  #### On the vm 
+#### On the vm 
   
   go to hardware Add - Cloudinit Drive - local-lvm
   
