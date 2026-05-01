@@ -8,8 +8,8 @@ permalink: /projects/edge/
 
 1. A Excel File to assist you setup your Edge Router in CLI
 <br>
-<p align="center">
-  <img src="/assets/images/Edge.PNG" width="400">
+<p align="left">
+  <img src="/assets/images/Edge.PNG" width="1000">
 </p>
 
 ---
