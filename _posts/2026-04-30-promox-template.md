@@ -44,7 +44,7 @@ title: "Proxmox Template"
   Network -> chose a bridge
   Finish
 
-#### On the vm 
+### On the vm 
   
   go to hardware Add - Cloudinit Drive - local-lvm
   
