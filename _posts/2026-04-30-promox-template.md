@@ -15,6 +15,8 @@ title: "Proxmox Template"
   wget https://cloud.debian.org/images/cloud/trixie/daily/20260404-2437/debian-13-generic-amd64-daily-20260404-2437.qcow2
 ```
 ### Set vga console
+900 = the id if the template
+
   ``` bash
   qm set 900 --serial0 socket --vga serial0
 ```
