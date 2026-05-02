@@ -6,14 +6,14 @@ permalink: /about/
 
 # Hi, I'm Freaky 👋
 
-## **Telecom Tech · Ex-IT · Linux Enthusiast**
+## **Telecom Tech · Formation in IT · Linux Enthusiast**
 
 ---
 
 I work in **telecommunications**, where I keep networks running and signals strong.
 
 Backed by a solid formation in **IT**, I'm always curious about what's happening under the hood \
-\
+<!--I'm  always ready to pull wire at work or at home the bigger the more fun i have :) -->\
 \
 Outside of work, I run a **homelab** where I break things on purpose 
 - self-hosting services
