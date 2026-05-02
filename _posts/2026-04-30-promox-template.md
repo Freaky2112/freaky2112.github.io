@@ -15,7 +15,7 @@ title: "Proxmox Template"
   wget https://cloud.debian.org/images/cloud/trixie/daily/20260404-2437/debian-13-generic-amd64-daily-20260404-2437.qcow2
 ```
 ### Set vga console
-900 = the id if the template
+don't forgot to chage the number of the template > 900 = the id if the template
 
   ``` bash
   qm set 900 --serial0 socket --vga serial0
@@ -37,13 +37,13 @@ title: "Proxmox Template"
 
 ### Create a vm 
   
-  General -> give a name and for ID put something big so its always a the bottom
-  OS -> don't use any media
-  System -> check qemu agent
-  Disks -> delete the disk
-  CPU -> socket 1 core 1
-  Memory -> 1024 MB
-  Network -> chose a bridge
+  General -> give a name and for ID put something big so its always a the bottom \
+  OS -> don't use any media \
+  System -> check qemu agent \
+  Disks -> delete the disk \
+  CPU -> socket 1 core 1 \
+  Memory -> 1024 MB \
+  Network -> chose a bridge \
   Finish
 
 ### On the vm 
