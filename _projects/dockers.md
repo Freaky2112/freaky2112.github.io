@@ -25,6 +25,3 @@ permalink: /projects/dockers/
 ---
 ## Docker
 🐳 Go to the [Docker](https://github.com/Freaky2112/Docker_template) page
-
-## Services
-🧰 Go to the [Services](service.md) page
