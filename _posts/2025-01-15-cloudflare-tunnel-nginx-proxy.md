@@ -5,6 +5,7 @@ title: "Setting up Cloudflare with nginx Proxy Manager"
 
 
 # Cloudflare Config for NPM
+
 ### How I expose self-hosted services securely without opening a single port on my router.
 Expose self-hosted services (Jellyfin, Home Assistant, Homer, etc.) to the internet
 **without** opening any ports on my router — using Cloudflare Tunnel as the ingress
