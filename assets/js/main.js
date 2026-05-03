@@ -56,15 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const typedEl = document.getElementById('typed-output');
   if (typedEl) {
     const lines = [
-      { type: 'prompt', text: 'freaky@homelab:~$ uptime' },
+      { type: 'prompt', text: 'freaky@networkeclipse:~$ uptime' },
       { type: 'output', text: ' 23 days, 4 hrs  |  load: 0.12, 0.09, 0.07' },
-      { type: 'prompt', text: 'freaky@homelab:~$ docker ps --format "{{.Names}}" | wc -l' },
+      { type: 'prompt', text: 'freaky@networkeclipse:~$ docker ps --format "{{.Names}}" | wc -l' },
       { type: 'output', text: ' 12' },
-      { type: 'prompt', text: 'freaky@homelab:~$ systemctl is-active home-assistant' },
+      { type: 'prompt', text: 'freaky@networkeclipse:~$ systemctl is-active home-assistant' },
       { type: 'ok',     text: ' active' },
-      { type: 'prompt', text: 'freaky@homelab:~$ echo "Always tinkering..." ' },
+      { type: 'prompt', text: 'freaky@networkeclipse:~$ echo "Always tinkering..."' },
       { type: 'output', text: ' Always tinkering...' },
-      { type: 'cursor', text: 'freaky@homelab:~$ █' },
+      { type: 'cursor', text: 'freaky@networkeclipse:~$ █' },
     ];
 
     let lineIdx = 0, charIdx = 0;

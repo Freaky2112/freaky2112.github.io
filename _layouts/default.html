@@ -6,14 +6,11 @@
   <meta name="description" content="{{ page.description | default: site.description }}" />
   <title>{% if page.title != "Home" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 
-  <!-- Theme flash prevention -->
+  <!-- Prevent flash of wrong theme -->
   <script>
     (function(){
       var t = localStorage.getItem('theme');
@@ -24,6 +21,7 @@
   </script>
 
   {% feed_meta %}
+  {% seo %}
 </head>
 <body>
 <div class="site-wrapper">
@@ -31,10 +29,17 @@
   <!-- ── Navigation ── -->
   <nav class="site-nav">
     <div class="nav-inner">
+
+      <!-- Logo + site name -->
       <a href="{{ '/' | relative_url }}" class="nav-brand">
-        <span class="nav-prompt">freaky@homelab</span><span class="nav-cursor"></span>
+        <img src="{{ '/assets/homelab.png' | relative_url }}" alt="Network Eclipse logo" class="nav-logo" />
+        <div class="nav-site-name">
+          <span class="name-main">networkeclipse</span>
+          <span class="name-sub">homelab · by freaky</span>
+        </div>
       </a>
 
+      <!-- Page links -->
       <ul class="nav-links">
         <li><a href="{{ '/' | relative_url }}"><span class="nav-icon">🏠</span> home</a></li>
         <li><a href="{{ '/blog/' | relative_url }}"><span class="nav-icon">📓</span> lab notes</a></li>
@@ -64,7 +69,7 @@
     <a href="{{ '/about/' | relative_url }}">~$ whoami</a>
   </div>
 
-  <!-- ── Page content ── -->
+  <!-- ── Content ── -->
   <main class="page-content">
     <div class="container">
       {{ content }}
@@ -75,21 +80,19 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
-        <span>©</span>
-        <span>{{ 'now' | date: "%Y" }}</span>
-        <span class="footer-green">freaky@homelab</span>
+        <img src="{{ '/assets/homelab.png' | relative_url }}" alt="Network Eclipse" class="footer-logo" />
+        <span class="footer-accent">networkeclipse.com</span>
         <span>·</span>
-        <span>built with Jekyll &amp; 🤘</span>
+        <span>© {{ 'now' | date: "%Y" }} freaky · built with Jekyll</span>
       </div>
       <div class="footer-links">
         <a href="https://github.com/Freaky2112" target="_blank" rel="noopener">github</a>
-        <a href="{{ '/about/' | relative_url }}">about</a>
+        <a href="{{ '/about/' | relative_url }}">whoami</a>
       </div>
     </div>
   </footer>
 
 </div>
-
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
