@@ -1,12 +1,62 @@
-title: "My Homelab"
-description: "My Projects"
-markdown: kramdown
+# ============================================================
+# Freaky's Homelab — _config.yml
+# ============================================================
 
+title:       "Freaky's Homelab"
+description: "Telecom tech by day, homelab hacker by night. Linux, Docker, self-hosting & endless tinkering."
+baseurl:     ""
+url:         "https://freaky2112.github.io"
+author:      "Freaky"
+github_user: "Freaky2112"
 
+# Build
+markdown:    kramdown
+highlighter: rouge
+
+kramdown:
+  input:         GFM
+  syntax_highlighter: rouge
+
+# Collections
 collections:
-  posts:  # Blogs section
+  posts:
     output: true
-  docs: # all docs files...
+    permalink: /blog/:year/:month/:day/:title/
+  docs:
     output: true
-  projects: # Links to repo projects
+    permalink: /docs/:title/
+  projects:
     output: true
+    permalink: /projects/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "default"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - old-posts
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

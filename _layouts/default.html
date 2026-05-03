@@ -1,17 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <title>{% if page.title != "Home" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+  <!-- Theme flash prevention -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = t || (d ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme','light');
+    })();
+  </script>
+
+  {% feed_meta %}
 </head>
 <body>
+<div class="site-wrapper">
 
-  {% include nav.html %}
+  <!-- ── Navigation ── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="{{ '/' | relative_url }}" class="nav-brand">
+        <span class="nav-prompt">freaky@homelab</span><span class="nav-cursor"></span>
+      </a>
 
-  <main class="container">
-    {{ content }}
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}"><span class="nav-icon">🏠</span> home</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"><span class="nav-icon">📓</span> lab notes</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}"><span class="nav-icon">🛠</span> stack</a></li>
+        <li><a href="{{ '/docs/' | relative_url }}"><span class="nav-icon">📖</span> runbooks</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"><span class="nav-icon">~$</span> whoami</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun">☀️</span>
+        </button>
+        <button class="nav-hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <a href="{{ '/' | relative_url }}">🏠 home</a>
+    <a href="{{ '/blog/' | relative_url }}">📓 lab notes</a>
+    <a href="{{ '/projects/' | relative_url }}">🛠 stack</a>
+    <a href="{{ '/docs/' | relative_url }}">📖 runbooks</a>
+    <a href="{{ '/about/' | relative_url }}">~$ whoami</a>
+  </div>
+
+  <!-- ── Page content ── -->
+  <main class="page-content">
+    <div class="container">
+      {{ content }}
+    </div>
   </main>
 
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span>©</span>
+        <span>{{ 'now' | date: "%Y" }}</span>
+        <span class="footer-green">freaky@homelab</span>
+        <span>·</span>
+        <span>built with Jekyll &amp; 🤘</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Freaky2112" target="_blank" rel="noopener">github</a>
+        <a href="{{ '/about/' | relative_url }}">about</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
