@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Shlink (TinyURL)"
+title: "Shlink"
 permalink: /projects/shlink/
 ---
 
 
-# Shlink
+# Shlink (TinyURL)
 
 ## Shlink in a self hosted URL shortener
 
