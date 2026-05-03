@@ -125,4 +125,4 @@ Change the `@import` at the top of `main.css` and the `--font-mono` / `--font-sa
 
 ---
 
-*Built with 💚 by Claude for Freaky's Homelab*
+*Pimped with 💚 by Claude  for Freaky's Homelab*
