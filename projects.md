@@ -6,7 +6,7 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
 ---
 
 <div class="page-header">
-  <p class="mono" style="color: var(--purple-2); font-size: 0.8rem; margin-bottom: 0.5rem;">$ docker ps --format "table {{.Names}}\t{{.Status}}"</p>
+  <p class="mono" style="color: var(--green); font-size: 0.8rem; margin-bottom: 0.5rem;">$ docker ps --format "table {{.Names}}\t{{.Status}}"</p>
   <h1>🛠 The Stack</h1>
   <p>Everything running in the lab — Docker containers, automations, and ongoing builds.</p>
 </div>

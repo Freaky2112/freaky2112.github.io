@@ -6,7 +6,7 @@ description: "Setup guides, knowledge base entries, and war stories from Freaky'
 ---
 
 <div class="page-header">
-  <p class="mono" style="color: var(--purple-2); font-size: 0.8rem; margin-bottom: 0.5rem;">$ ls -lt ~/lab-notes/</p>
+  <p class="mono" style="color: var(--green); font-size: 0.8rem; margin-bottom: 0.5rem;">$ ls -lt ~/lab-notes/</p>
   <h1>📓 Lab Notes</h1>
   <p>Setup guides, knowledge base articles, and war stories from the homelab trenches.</p>
 </div>

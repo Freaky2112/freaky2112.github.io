@@ -6,7 +6,7 @@ description: "The human behind Freaky's Homelab — telecom tech, Linux enthusia
 ---
 
 <div class="page-header">
-  <p class="mono" style="color: var(--purple-2); font-size: 0.8rem; margin-bottom: 0.5rem;">$ cat /etc/freaky/about.txt</p>
+  <p class="mono" style="color: var(-green); font-size: 0.8rem; margin-bottom: 0.5rem;">$ cat /etc/freaky/about.txt</p>
   <h1>Hi, I'm Freaky 👋</h1>
   <p>Telecom tech by day · homelab hacker by night · Linux or bust</p>
 </div>
