@@ -6,7 +6,7 @@ description: "Setup guides, troubleshooting notes and runbooks from Freaky's hom
 ---
 
 <div class="page-header">
-  <p class="mono" style="color: var(--green); font-size: 0.8rem; margin-bottom: 0.5rem;">$ find ~/runbooks/ -name "*.md" | sort</p>
+  <p class="mono" style="color: var(--purple-2); font-size: 0.8rem; margin-bottom: 0.5rem;">$ find ~/runbooks/ -name "*.md" | sort</p>
   <h1>📖 Runbooks</h1>
   <p>Setup guides, troubleshooting docs and reference notes. Future me will be thankful.</p>
 </div>

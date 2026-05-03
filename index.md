@@ -9,7 +9,7 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
   <div class="hero-eyebrow">homelab · linux · telecom</div>
   <h1 class="hero-title">
     <span class="accent">network</span><span class="accent-blue">eclipse</span><br>
-    <span class="dim">// always tinkering.</span>
+    <span class="dim">// always tinkering.  //</span>
   </h1>
   <p class="hero-sub">
     Telecom tech by day, homelab hacker by night. I self-host everything I can,

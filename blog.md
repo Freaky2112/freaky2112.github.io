@@ -6,7 +6,7 @@ description: "Setup guides, knowledge base entries, and war stories from Freaky'
 ---
 
 <div class="page-header">
-  <p class="mono" style="color: var(--green); font-size: 0.8rem; margin-bottom: 0.5rem;">$ ls -lt ~/lab-notes/</p>
+  <p class="mono" style="color: var(--purple-2); font-size: 0.8rem; margin-bottom: 0.5rem;">$ ls -lt ~/lab-notes/</p>
   <h1>📓 Lab Notes</h1>
   <p>Setup guides, knowledge base articles, and war stories from the homelab trenches.</p>
 </div>
@@ -18,8 +18,6 @@ description: "Setup guides, knowledge base entries, and war stories from Freaky'
     <div>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-      {% if post.tags.size > 0 %}
-      <div class="card-tags" style="margin-top: 0.5rem;">
         {% for tag in post.tags %}
         <span class="badge badge-gray">{{ tag }}</span>
         {% endfor %}
