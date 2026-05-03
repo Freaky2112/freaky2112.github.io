@@ -43,10 +43,15 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
   <div class="stat-grid">
     <div class="stat-card">
       <span class="stat-num">12+</span>
-      <span class="stat-label">containers</span>
+      <span class="stat-label">Dockers</span>
+    </div>
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="stat-num">5</span>
+      <span class="stat-label">LXC containers</span>
     </div>
     <div class="stat-card">
-      <span class="stat-num">3</span>
+      <span class="stat-num">5</span>
       <span class="stat-label">VMs running</span>
     </div>
     <div class="stat-card">
