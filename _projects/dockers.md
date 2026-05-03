@@ -25,3 +25,8 @@ permalink: /projects/dockers/
 ---
 ## Docker
 🐳 Go to the [Docker](https://github.com/Freaky2112/Docker_template) page
+
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*
+
+

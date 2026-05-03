@@ -26,3 +26,6 @@ permalink: /projects/scripts/
 ---
 ## Scripts
 📜 Go to the [Scripts](https://github.com/Freaky2112/Scripts) page
+
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

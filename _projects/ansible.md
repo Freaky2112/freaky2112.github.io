@@ -18,3 +18,5 @@ permalink: /projects/ansible/
 Ⓐ Go to the [Ansible_Desktop](https://github.com/Freaky2112/ansible_desktop) page \
 Ⓐ Go to the [Ansible](https://github.com/Freaky2112/Ansible) page 
 
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

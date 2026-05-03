@@ -228,6 +228,6 @@ sudo systemctl restart ssh
 
 If you're still using RSA or older keys, switching to **Ed25519** is a quick upgrade that improves both **security and performance**.
 
----
 
-You now have a modern SSH setup.
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

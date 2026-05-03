@@ -50,6 +50,7 @@ Internet → Cloudflare Tunnel → cloudflared container
 
 Cloudflare docker: 
 [Cloudflare](https://freaky2112.github.io/docs/cloudflare/) 
+<a href="/docs/cloudflare">Cloudflare</a>
 
 In Cloudflare dashboard, add public hostnames pointing to your NPM instance:
 
@@ -69,4 +70,4 @@ Zero open ports. All traffic flows through Cloudflare's network. SSL everywhere.
 
 ---
 
-*Questions? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

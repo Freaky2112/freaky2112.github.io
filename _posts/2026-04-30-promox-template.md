@@ -59,4 +59,6 @@ don't forgot to chage the number of the template > 900 = the id if the template
   Make sure that the Start on boot is set to yes
 
   And now Convert to template
-  
+ 
+ ---
+ *Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

@@ -112,3 +112,6 @@ If you use Nginx Proxy Manager, Traefik, or Caddy:
 
 proxy domain → shlink:8080
 enable SSL
+
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

@@ -19,3 +19,4 @@ title: "Docker you Must Install"
   
 
 ---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*
