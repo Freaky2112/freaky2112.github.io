@@ -4,19 +4,6 @@ title: "Setting up Cloudflare with nginx Proxy Manager"
 ---
 
 
-<div class="page-header">
-  <p class="mono" style="color: var(--green); font-size: 0.8rem; margin-bottom: 0.5rem;">
-    📓 lab notes · {{ page.date | date: "%B %d, %Y" }}
-  </p>
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.excerpt }}</p>
-  <div style="margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.35rem;">
-    {% for tag in page.tags %}
-    <span class="badge badge-gray">{{ tag }}</span>
-    {% endfor %}
-  </div>
-</div>
-
 # Cloudflare Config for NPM
 ### How I expose self-hosted services securely without opening a single port on my router.
 Expose self-hosted services (Jellyfin, Home Assistant, Homer, etc.) to the internet
