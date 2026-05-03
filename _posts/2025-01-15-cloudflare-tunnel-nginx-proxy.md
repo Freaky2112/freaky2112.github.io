@@ -35,7 +35,7 @@ Internet → Cloudflare Tunnel → cloudflared container
 ## Step 2 — Deploy cloudflared
 
 Deploy Cloudflare-DDNS docker: 
-[Cloudflare](https://freaky2112.github.io/docs/cloudflare/) \
+[Cloudflare](https://freaky2112.github.io/docs/cloudflare/) 
 
 In Cloudflare dashboard, add public hostnames pointing to your NPM instance:
 
