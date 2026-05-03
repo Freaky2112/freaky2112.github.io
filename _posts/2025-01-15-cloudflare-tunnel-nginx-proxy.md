@@ -48,13 +48,11 @@ Internet → Cloudflare Tunnel → cloudflared container
 
 ## Step 2 — Deploy cloudflared
 
-Cloudflare docker: 
-[Cloudflare](https://freaky2112.github.io/docs/cloudflare/) 
-<a href="/docs/cloudflare">Cloudflare</a>
+Deploy Cloudflare-DDNS docker: 
+[Cloudflare](https://freaky2112.github.io/docs/cloudflare/) \
 
 In Cloudflare dashboard, add public hostnames pointing to your NPM instance:
 
-| Hostname | Service |
 |----------|---------|
 | `jellyfin.yourdomain.com` | `http://npm:80` |
 | `ha.yourdomain.com` | `http://npm:80` |
