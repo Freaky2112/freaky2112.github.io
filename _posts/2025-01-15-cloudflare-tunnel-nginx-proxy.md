@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Setting up Cloudflare Tunnel with nginx Proxy Manager"
-date: 2025-01-15
-tags: [cloudflare, docker, networking, nginx]
+title: "Setting up Cloudflare with nginx Proxy Manager"
 excerpt: "How I expose self-hosted services securely without opening a single port on my router."
 ---
+
 
 <div class="page-header">
   <p class="mono" style="color: var(--green); font-size: 0.8rem; margin-bottom: 0.5rem;">
@@ -19,7 +18,7 @@ excerpt: "How I expose self-hosted services securely without opening a single po
   </div>
 </div>
 
-## The goal
+# Cloudflare Config for NPM
 
 Expose self-hosted services (Jellyfin, Home Assistant, Homer, etc.) to the internet
 **without** opening any ports on my router — using Cloudflare Tunnel as the ingress
@@ -49,27 +48,8 @@ Internet → Cloudflare Tunnel → cloudflared container
 
 ## Step 2 — Deploy cloudflared
 
-Add this to your `docker-compose.yml`:
-
-```yaml
-cloudflared:
-  image: cloudflare/cloudflared:latest
-  container_name: cloudflared
-  restart: unless-stopped
-  command: tunnel --no-autoupdate run
-  environment:
-    - TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
-  networks:
-    - proxy
-```
-
-Create a `.env` file with:
-
-```bash
-CF_TUNNEL_TOKEN=your_token_here
-```
-
-## Step 3 — Configure the tunnel routes
+Links to Cloudflare docker 
+[Cloudflare](https://freaky2112.github.io/docs/cloudflare/) 
 
 In Cloudflare dashboard, add public hostnames pointing to your NPM instance:
 
