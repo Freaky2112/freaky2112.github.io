@@ -81,6 +81,7 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
       </div>
     </a>
 
+  <div>
     <a href="{{ '/projects/' | relative_url }}" class="card" style="text-decoration:none;">
       <div class="card-title">🛠 The Stack</div>
       <p class="card-desc">Docker containers, Home Assistant automations, and everything in between.</p>
@@ -90,6 +91,7 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
       </div>
     </a>
 
+<div>
     <a href="{{ '/docs/' | relative_url }}" class="card" style="text-decoration:none;">
       <div class="card-title">📖 Runbooks</div>
       <p class="card-desc">Troubleshooting notes and setup docs so I don't repeat my own mistakes.</p>
@@ -99,6 +101,7 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
       </div>
     </a>
 
+<div>
     <a href="{{ '/about/' | relative_url }}" class="card" style="text-decoration:none;">
       <div class="card-title">~$ whoami</div>
       <p class="card-desc">Telecom tech, Linux daily driver, chronic tinkerer. The human behind the lab.</p>
