@@ -423,6 +423,39 @@ tr:last-child td { border-bottom: none; }
 .card-desc  { font-size: 0.84rem; color: var(--text-2); line-height: 1.6; margin: 0; }
 .card-tags  { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
 
+/* ── Clickable card overlay pattern ────────────────────────── */
+.card-link {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card-link:hover {
+  border-color: var(--border-2);
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(123, 94, 167, 0.1);
+  text-decoration: none;
+  color: inherit;
+  opacity: 1;
+}
+/* Invisible full-surface anchor stretched over the card */
+.card-link-anchor {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+}
+/* Badges and inner links float above the overlay */
+.card-link .badge,
+.card-link a:not(.card-link-anchor) {
+  position: relative;
+  z-index: 2;
+}
+.card-link .card-title { color: var(--text); }
+.card-link .card-desc  { color: var(--text-2); }
+
 /* ── Badges ────────────────────────────────────────────────── */
 .badge {
   display: inline-flex; align-items: center;

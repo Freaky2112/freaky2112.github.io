@@ -81,35 +81,35 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
       </div>
     </a>
 
-  <div>
-    <a href="{{ '/projects/' | relative_url }}" class="card" style="text-decoration:none;">
+  <div class="card card-link">
+      <a href="{{ '/projects/' | relative_url }}" class="card-link-anchor" aria-label="The Stack"></a>
       <div class="card-title">🛠 The Stack</div>
       <p class="card-desc">Docker containers, Home Assistant automations, and everything in between.</p>
       <div class="card-tags">
         <span class="badge badge-amber">docker</span>
         <span class="badge badge-blue">homeassistant</span>
       </div>
-    </a>
+    </div>
 
-<div>
-    <a href="{{ '/docs/' | relative_url }}" class="card" style="text-decoration:none;">
+ <div class="card card-link">
+      <a href="{{ '/docs/' | relative_url }}" class="card-link-anchor" aria-label="Runbooks"></a>
       <div class="card-title">📖 Runbooks</div>
       <p class="card-desc">Troubleshooting notes and setup docs so I don't repeat my own mistakes.</p>
       <div class="card-tags">
         <span class="badge badge-purple">docs</span>
         <span class="badge badge-gray">reference</span>
       </div>
-    </a>
-
-<div>
-    <a href="{{ '/about/' | relative_url }}" class="card" style="text-decoration:none;">
+    </div>
+ 
+ <div class="card card-link">
+      <a href="{{ '/about/' | relative_url }}" class="card-link-anchor" aria-label="whoami"></a>
       <div class="card-title">~$ whoami</div>
       <p class="card-desc">Telecom tech, Linux daily driver, chronic tinkerer. The human behind the lab.</p>
       <div class="card-tags">
-        <span class="badge badge-teal">telecom</span>
+        <span class="badge badge-cyan">telecom</span>
         <span class="badge badge-green">linux</span>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
