@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (typedEl) {
     const lines = [
       { type: 'prompt', text: 'freaky@networkeclipse:~$ uptime' },
-      { type: 'output', text: ' 235 days, 21 hrs  |  load: 0.47, 0.22, 0.18' },
+      { type: 'output', text: ' 235 days, 21 hrs  |  load: 1.47, 1.22, 1.18' },
       { type: 'prompt', text: 'freaky@networkeclipse:~$ docker ps --format "{{.Names}}" | wc -l' },
       { type: 'output', text: ' 12' },
       { type: 'prompt', text: 'freaky@networkeclipse:~$ systemctl is-active traefik' },
