@@ -123,7 +123,7 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
 <!-- Custom builds section -->
 <section style="margin-bottom: 2.5rem;">
   <div class="section-header">
-    <h2 class="mono">// custom builds</h2>
+    <h2 class="mono">// Links to other Repos</h2>
     <div class="section-line"></div>
   </div>
  
