@@ -127,29 +127,26 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
     <h2 class="mono">// custom builds</h2>
     <div class="section-line"></div>
   </div>
-  <div class="card-grid">
-    {% for project in site.projects %}
-    <div class="card">
-      <div class="card-title">{{ project.title }}</div>
-      <p class="card-desc">{{ project.description }}</p>
-      {% if project.tags %}
-      <div class="card-tags">
-        {% for tag in project.tags %}
+  
+ <ul class="post-list">
+  {% for post in site.posts %}
+  <li class="post-item">
+    <div>
+      <a href="{{ projects.url | relative_url }}">{{ projects.title }}</a>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      {% if projects.tags.size > 0 %}
+      <div class="card-tags" style="margin-top: 0.5rem;">
+        {% for tag in projects.tags %}
         <span class="badge badge-gray">{{ tag }}</span>
         {% endfor %}
       </div>
       {% endif %}
-      {% if project.link %}
-      <div style="margin-top: 0.75rem;">
-        <a href="{{ project.link }}" target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.78rem;">view →</a>
-      </div>
-      {% endif %}
     </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
+  </li>
+  {% endfor %}
+</ul>
+ 
+  
 <!-- Home Assistant -->
 <section>
   <div class="section-header">
