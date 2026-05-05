@@ -45,7 +45,7 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
       <span class="stat-num">1</span>
       <span class="stat-label">Tor Node</span>
     </div>
-  <div class="stat-grid">
+    <div class="stat-grid">
     <div class="stat-card">
       <span class="stat-num">12+</span>
       <span class="stat-label">Dockers</span>
