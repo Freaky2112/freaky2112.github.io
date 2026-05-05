@@ -52,10 +52,6 @@ description: "Freaky's homelab — self-hosted services, Linux, automation and e
     </div>
     <div class="stat-card">
       <span class="stat-num">5</span>
-      <span class="stat-label">LXC containers</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-num">5</span>
       <span class="stat-label">VMs running</span>
     </div>
     <div class="stat-card">
