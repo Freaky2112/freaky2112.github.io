@@ -126,39 +126,14 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
     <h2 class="mono">// custom builds</h2>
     <div class="section-line"></div>
   </div>
+ 
   <div class="card-grid">
-
 {% for projects in site.projects %}
+    <span class="status-dot up"></span>
     <div class="card card-link">
       <a href="{{projects.url}}">{{projects.title}}</a> 
       <p>{{ projects.excerpt | strip_html | truncate: 120 }} </p>
       <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
     </div>
 {% endfor %}
-
-</section>
-
-<!-- Home Assistant -->
-<section>
-  <div class="section-header">
-    <h2 class="mono">// home assistant automations</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-title">🌅 Wake-up routine</div>
-      <p class="card-desc">Lights gradually brighten, coffee maker starts, phone charger turns off — all timed.</p>
-      <div class="card-tags"><span class="badge badge-amber">automation</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title">🔔 Service alerts</div>
-      <p class="card-desc">Uptime Kuma triggers HA notification if any self-hosted service goes down.</p>
-      <div class="card-tags"><span class="badge badge-amber">automation</span><span class="badge badge-purple">monitoring</span></div>
-    </div>
-    <div class="card">
-      <div class="card-title">🌡 Climate control</div>
-      <p class="card-desc">Smart thermostat automations based on presence detection and time of day.</p>
-      <div class="card-tags"><span class="badge badge-amber">automation</span></div>
-    </div>
-  </div>
 </section>
