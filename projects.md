@@ -120,33 +120,50 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
   </div>
 </section>
 
-<!-- Custom projects from _projects collection -->
-{% if site.projects.size > 0 %}
+<!-- Custom builds section -->
 <section style="margin-bottom: 2.5rem;">
   <div class="section-header">
     <h2 class="mono">// custom builds</h2>
     <div class="section-line"></div>
   </div>
-  
- <ul class="post-list">
-  {% for post in site.posts %}
-  <li class="post-item">
-    <div>
-      <a href="{{ projects.url | relative_url }}">{{ projects.title }}</a>
-      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-      {% if projects.tags.size > 0 %}
-      <div class="card-tags" style="margin-top: 0.5rem;">
-        {% for tag in projects.tags %}
-        <span class="badge badge-gray">{{ tag }}</span>
-        {% endfor %}
+  <div class="card-grid">
+
+    <div class="card card-link">
+      <a href="https://github.com/Freaky2112" target="_blank" rel="noopener" class="card-link-anchor" aria-label="GitHub Projects"></a>
+      <div class="card-title">🐙 GitHub Projects</div>
+      <p class="card-desc">All my public repos, scripts and configs. Check what's cooking on GitHub.</p>
+      <div class="card-tags">
+        <span class="badge badge-gray">github</span>
+        <span class="badge badge-blue">open source</span>
       </div>
-      {% endif %}
+      <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
     </div>
-  </li>
-  {% endfor %}
-</ul>
- 
-  
+
+    <div class="card card-link">
+      <a href="{{ '/docs/' | relative_url }}" class="card-link-anchor" aria-label="Runbooks"></a>
+      <div class="card-title">📖 Runbooks & Docs</div>
+      <p class="card-desc">Setup guides and troubleshooting notes for every service in the lab.</p>
+      <div class="card-tags">
+        <span class="badge badge-purple">docs</span>
+        <span class="badge badge-gray">reference</span>
+      </div>
+      <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
+    </div>
+
+    <div class="card card-link">
+      <a href="{{ '/blog/' | relative_url }}" class="card-link-anchor" aria-label="Lab Notes"></a>
+      <div class="card-title">🧪 Lab Experiments</div>
+      <p class="card-desc">Write-ups on things I'm actively building, breaking and fixing in the lab.</p>
+      <div class="card-tags">
+        <span class="badge badge-green">blog</span>
+        <span class="badge badge-amber">wip</span>
+      </div>
+      <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
+    </div>
+
+  </div>
+</section>
+
 <!-- Home Assistant -->
 <section>
   <div class="section-header">
