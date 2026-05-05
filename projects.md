@@ -128,12 +128,12 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
   </div>
  
   <div class="card-grid">
-{% for projects in site.projects %}
+  {% for projects in site.projects %}
     <div class="card card-link">
       <span class="status-dot up"></span>
       <a href="{{projects.url}}">{{projects.title}}</a> 
       <p>{{ projects.excerpt | strip_html | truncate: 120 }} </p>
       <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
     </div>
-{% endfor %}
+  {% endfor %}
 </section>
