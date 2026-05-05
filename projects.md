@@ -131,14 +131,11 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
 {% for projects in site.projects %}
     <div class="card card-link">
       <a href="{{projects.url}}">{{projects.title}}</a> 
-      <div class="card-tags">
-        <span class="badge badge-gray">github</span>
-        <span class="badge badge-blue">open source</span>
-      </div>
+      <p>{{ projects.excerpt | strip_html | truncate: 120 }} </p>
       <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
     </div>
+{% endfor %}
 
-  </div>
 </section>
 
 <!-- Home Assistant -->
