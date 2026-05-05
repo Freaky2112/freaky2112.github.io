@@ -136,4 +136,3 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
       <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
     </div>
   {% endfor %}
-</section>
