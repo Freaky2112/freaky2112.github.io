@@ -57,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
   if (typedEl) {
     const lines = [
       { type: 'prompt', text: 'freaky@networkeclipse:~$ uptime' },
-      { type: 'output', text: ' 23 days, 4 hrs  |  load: 0.12, 0.09, 0.07' },
+      { type: 'output', text: ' 235 days, 21 hrs  |  load: 1.47, 1.22, 1.18' },
       { type: 'prompt', text: 'freaky@networkeclipse:~$ docker ps --format "{{.Names}}" | wc -l' },
       { type: 'output', text: ' 12' },
-      { type: 'prompt', text: 'freaky@networkeclipse:~$ systemctl is-active home-assistant' },
+      { type: 'prompt', text: 'freaky@networkeclipse:~$ systemctl is-active traefik' },
       { type: 'ok',     text: ' active' },
       { type: 'prompt', text: 'freaky@networkeclipse:~$ echo "Always tinkering..."' },
       { type: 'output', text: ' Always tinkering...' },
@@ -109,43 +109,22 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ── Fade-up on scroll ─────────────────────────────────────
-  const animTargets = document.querySelectorAll('.card, .post-item, .stat-card');
-
   if ('IntersectionObserver' in window) {
     const obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) {
           e.target.style.opacity = '1';
           e.target.style.transform = 'translateY(0)';
-          e.target.style.pointerEvents = '';
           obs.unobserve(e.target);
         }
       });
-    }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
+    }, { threshold: 0.1 });
 
-    animTargets.forEach(function(el) {
+    document.querySelectorAll('.card, .post-item, .stat-card').forEach(function(el) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(8px)';
       el.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-      el.style.pointerEvents = 'none';
       obs.observe(el);
-    });
-
-    // Safety net: force-reveal everything after 800ms
-    // in case IntersectionObserver misfires (e.g. elements already in viewport)
-    setTimeout(function() {
-      animTargets.forEach(function(el) {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-        el.style.pointerEvents = '';
-      });
-    }, 800);
-
-  } else {
-    // No IntersectionObserver support — just show everything
-    animTargets.forEach(function(el) {
-      el.style.opacity = '1';
-      el.style.pointerEvents = '';
     });
   }
 
