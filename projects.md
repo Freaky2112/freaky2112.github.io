@@ -128,35 +128,12 @@ description: "Freaky's self-hosted stack — Docker services, Home Assistant, an
   </div>
   <div class="card-grid">
 
+{% for projects in site.projects %}
     <div class="card card-link">
-      <a href="https://github.com/Freaky2112" target="_blank" rel="noopener" class="card-link-anchor" aria-label="GitHub Projects"></a>
-      <div class="card-title">🐙 GitHub Projects</div>
-      <p class="card-desc">All my public repos, scripts and configs. Check what's cooking on GitHub.</p>
+      <a href="{{projects.url}}">{{projects.title}}</a> 
       <div class="card-tags">
         <span class="badge badge-gray">github</span>
         <span class="badge badge-blue">open source</span>
-      </div>
-      <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
-    </div>
-
-    <div class="card card-link">
-      <a href="{{ '/docs/' | relative_url }}" class="card-link-anchor" aria-label="Runbooks"></a>
-      <div class="card-title">📖 Runbooks & Docs</div>
-      <p class="card-desc">Setup guides and troubleshooting notes for every service in the lab.</p>
-      <div class="card-tags">
-        <span class="badge badge-purple">docs</span>
-        <span class="badge badge-gray">reference</span>
-      </div>
-      <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
-    </div>
-
-    <div class="card card-link">
-      <a href="{{ '/blog/' | relative_url }}" class="card-link-anchor" aria-label="Lab Notes"></a>
-      <div class="card-title">🧪 Lab Experiments</div>
-      <p class="card-desc">Write-ups on things I'm actively building, breaking and fixing in the lab.</p>
-      <div class="card-tags">
-        <span class="badge badge-green">blog</span>
-        <span class="badge badge-amber">wip</span>
       </div>
       <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-2);">view →</div>
     </div>
