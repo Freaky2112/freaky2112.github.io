@@ -1,0 +1,36 @@
+---
+layout: default
+title: 404 — Page Not Found
+permalink: /404.html
+---
+
+<div class="not-found">
+  <div class="error-code">404</div>
+  <div class="error-msg">$ find / -name "{{ page.url }}" — not found</div>
+  <p style="color: var(--text-3); margin: 1rem 0 2rem; font-family: var(--font-mono); font-size: 0.85rem;">
+    This page doesn't exist, got lost, or was decommissioned.
+  </p>
+
+  <div class="terminal" style="max-width: 480px; margin: 0 auto 2rem; text-align: left;">
+    <div class="terminal-bar">
+      <div class="terminal-dots">
+        <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
+      </div>
+      <div class="terminal-title">bash — error</div>
+    </div>
+    <div class="terminal-body">
+      <div><span class="t-prompt">freaky@homelab:~$</span> <span class="t-cmd">curl {{ page.url }}</span></div>
+      <div><span class="t-err">curl: (404) The requested URL returned error: 404</span></div>
+      <div><span class="t-comment"># maybe try one of these instead:</span></div>
+      <br>
+      <div><span class="t-ok">→</span> <a href="{{ '/' | relative_url }}" class="t-val" style="text-decoration:none;">~/home</a></div>
+      <div><span class="t-ok">→</span> <a href="{{ '/blog/' | relative_url }}" class="t-val" style="text-decoration:none;">~/lab-notes</a></div>
+      <div><span class="t-ok">→</span> <a href="{{ '/projects/' | relative_url }}" class="t-val" style="text-decoration:none;">~/stack</a></div>
+      <div><span class="t-ok">→</span> <a href="{{ '/about/' | relative_url }}" class="t-val" style="text-decoration:none;">~/whoami</a></div>
+    </div>
+  </div>
+
+  <a href="{{ '/' | relative_url }}" class="badge badge-green" style="font-size: 0.85rem; padding: 8px 20px; border-radius: 8px; text-decoration: none;">
+    ← back to home
+  </a>
+</div>
