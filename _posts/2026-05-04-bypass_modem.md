@@ -6,7 +6,11 @@ title: "How to bypass ypur ISP Modem"
 
 # How to bypass your ISP Modem
 
+## Bell Canada and Affiliate
+ 
 ### Bypass Modem
+
+
 
 #### Legacy setup Ont 
   - Alcatel 240/440/820
