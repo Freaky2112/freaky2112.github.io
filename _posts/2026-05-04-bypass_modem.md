@@ -13,8 +13,8 @@ title: "How to bypass ypur ISP Modem"
 
 
 #### Legacy setup Ont 
-  - Alcatel 240/440/820
-  - Huawei 
+  - Alcatel 240 / 440 / 820
+  - Huawei HG8240 / MA5672
   - Alcatel XGS (Ebox / reseller)
 
 On Bell: Just remove the modem put your router and setup vlan 35 on the wan side with PPPoE connection.
