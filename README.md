@@ -9,17 +9,17 @@ green accent, light/dark toggle, new page names, custom 404, and more.
 
 ```
 _layouts/
-  default.html          ← new layout (replaces existing)
+  default.html          ← new layout 
 
 assets/
-  css/main.css          ← full new stylesheet (replaces existing)
+  css/main.css          ← full new stylesheet 
   js/main.js            ← theme toggle + mobile menu + terminal animation
 
 _posts/
-  2025-01-15-cloudflare-tunnel-nginx-proxy.md   ← sample post (keep or delete)
+  2025-01-15-cloudflare-tunnel-nginx-proxy.md   ← sample post 
 
-index.md                ← new homepage with terminal hero + stat cards
-about.md                ← new whoami page with skill cards
+index.md                ← homepage with terminal hero + stat cards
+about.md                ← whoami page with skill cards
 blog.md                 ← renamed to "Lab Notes"
 projects.md             ← renamed to "The Stack" with service cards
 docs.md                 ← renamed to "Runbooks"
@@ -36,8 +36,8 @@ _config.yml             ← updated title, description, permalinks
 1. **Backup your repo** first (or just rely on git history)
 2. Copy these files into your repo, replacing existing ones:
    - `_layouts/default.html`
-   - `assets/css/main.css` *(check if your CSS file has a different name/path)*
-   - `assets/js/main.js` *(new file)*
+   - `assets/css/main.css` 
+   - `assets/js/main.js` 
    - `index.md`
    - `about.md`
    - `blog.md`
@@ -47,11 +47,6 @@ _config.yml             ← updated title, description, permalinks
    - `_config.yml`
 
 3. Commit and push — GitHub Pages will rebuild automatically
-
-### Option B — Check your existing CSS path first
-
-If your existing CSS lives at a different path (e.g. `assets/css/style.css`),
-either rename the new file to match OR update the `<link>` tag in `default.html`.
 
 ---
 
