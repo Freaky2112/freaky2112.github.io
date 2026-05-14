@@ -1,4 +1,9 @@
-# Grafana
+---
+layout: default
+title: "Grafana"
+permalink: /docs/grafana/
+---
+
 
 ---
 
