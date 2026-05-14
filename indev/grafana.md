@@ -5,6 +5,8 @@
 Prometheus (collect metrics)
 Grafana (dashboards)
 Node Exporter (Linux system metrics like CPU, RAM, disk)
+Loki (collect logs)
+Alloy (gather data—logs)
 
 ## Create Docker
 
