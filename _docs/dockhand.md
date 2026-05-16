@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "IT Tools"
-permalink: /docs/it-tools/
+title: "Dockhand"
+permalink: /docs/dockhand/
 ---
 
 ### Dockhand
