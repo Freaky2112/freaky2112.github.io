@@ -393,7 +393,7 @@ journalctl -u alloy -f
 ```
 
 ---
-<!-->
+<!--
 ## Add Discord Notification
 
 1. Create a Discord webhook
@@ -471,7 +471,7 @@ If you tell me what datasource you use (Prometheus, Loki, InfluxDB, Zabbix, etc.
 
 ## Add Grafana Discord Notifications
 
-This guide explains how to set up Discord notifications for your Grafana alerts.
+how to set up Discord notifications for your Grafana alerts.
 
 ### 1. Create a Discord Webhook
 
