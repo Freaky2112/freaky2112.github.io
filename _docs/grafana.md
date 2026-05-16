@@ -391,3 +391,146 @@ Follow logs:
 ```bash
 journalctl -u alloy -f
 ```
+
+---
+<!-->
+## Add Discord Notification
+
+1. Create a Discord webhook
+
+In your Discord server:
+
+Open Server Settings → Integrations → Webhooks
+Click New Webhook
+Choose the channel where alerts should go
+Copy the webhook URL
+
+It’ll look something like:
+https://discord.com/api/webhooks/...
+
+2. Add Discord as a contact point in Grafana
+
+If you're using modern Grafana alerting (Grafana 8+):
+
+Log into Grafana
+Go to Alerts & IRM → Contact points
+Click Create contact point
+Name it something like Discord Alerts
+Under Integration, choose Discord
+Paste your webhook URL
+Optional:
+Username override
+Message title/body formatting
+Click Test
+Save
+
+You can learn more in Grafana’s official docs:
+Grafana alerting contact points documentation
+
+3. Link contact point to notification policy
+
+Creating the contact point alone won’t send anything (Grafana likes hiding the important step in another menu 😄).
+
+Go to:
+
+Alerts & IRM → Notification policies
+Edit the default policy or create a new one
+Set contact point = your Discord contact point
+Save
+
+Now alerts routed through that policy will send to Discord.
+
+4. Attach alerts
+
+For dashboards/panels:
+
+Open a panel
+Edit → Alert
+Create alert rule (CPU > 80%, disk full, container down, etc.)
+Save
+
+When triggered, Grafana sends the alert to Discord.
+
+Example homelab alerts worth sending
+
+Since you’re doing homelab/log monitoring, useful Discord alerts are:
+
+Proxmox node down
+Docker container stopped
+Disk usage > 85%
+High CPU temp
+Failed backups
+Internet down
+UPS on battery
+
+If you're monitoring Linux and Windows, Grafana can alert on both as long as metrics are coming in (via things like Prometheus + exporters such as node_exporter for Linux or windows_exporter for Windows).
+
+If you tell me what datasource you use (Prometheus, Loki, InfluxDB, Zabbix, etc.), I can help you build actual alert rules too.
+
+-->
+
+## Add Grafana Discord Notifications
+
+This guide explains how to set up Discord notifications for your Grafana alerts.
+
+### 1. Create a Discord Webhook
+
+In your Discord server:
+
+1.  Open **Server Settings** → **Integrations** → **Webhooks**.
+2.  Click **New Webhook**.
+3.  Choose the channel where alerts should go.
+4.  Copy the **Webhook URL**.
+
+The URL will look something like:
+`https://discord.com/api/webhooks/...`
+
+---
+
+### 2. Add Discord as a Contact Point in Grafana
+
+If you're using modern Grafana alerting (Grafana 8+):
+
+1.  Log into Grafana.
+2.  Go to **Alerting** → **Contact points** (In newer versions: **Alerts & IRM** → **Contact points**).
+3.  Click **Add contact point**.
+4.  **Name**: e.g., `Discord Alerts`.
+5.  **Integration**: Choose **Discord**.
+6.  **Webhook URL**: Paste your Discord webhook URL.
+7.  *Optional*:
+    *   Username override
+    *   Message title/body formatting
+8.  Click **Test** to verify.
+9.  Click **Save contact point**.
+
+> [!TIP]
+> You can learn more in [Grafana’s official contact points documentation](https://grafana.com/docs/grafana/latest/alerting/fundamentals/notifications/contact-points/).
+
+---
+
+### 3. Link Contact Point to Notification Policy
+
+Creating the contact point alone won’t send notifications. You must link it to a policy.
+
+1.  Go to **Alerting** → **Notification policies**.
+2.  Edit the **Default policy** or create a new one.
+3.  Set **Default contact point** = `Discord Alerts`.
+4.  **Save**.
+
+Now alerts routed through that policy will be sent to Discord.
+
+---
+
+### 4. Attach Alerts to Panels
+
+For dashboards and panels:
+
+1.  Open a panel and click **Edit**.
+2.  Go to the **Alert** tab.
+3.  Click **Create alert rule from this panel**.
+4.  Define your conditions (e.g., `CPU > 80%`, `Disk full`, `Container down`).
+5.  **Save and exit**.
+
+When the condition is triggered, Grafana sends the alert to Discord.
+
+---
