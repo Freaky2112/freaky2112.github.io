@@ -17,7 +17,7 @@ title: "Docker you Must Install"
 * <a href="/docs/dockge">Dockge</a>
 * <a href="/docs/uptimekuma">Uptime Kuma</a>
 * <a href="/docs/grafana">Grafana</a>
-* <a href="/docs/ittools">IT Tools</a>
+* <a href="/docs/it-tools">IT Tools</a>
 * <a href="/docs/dockhand">Dockhand</a>
   
 
