@@ -180,8 +180,9 @@ In `/_layouts/default.html`, add this snippet where you want it to appear:
     {{ minutes }} min read
   </p>
 {% endif %}
-```
 
+
+```
 ### Option B — Add to Posts Only (Recommended)
 
 Create `/_layouts/post.html`:
@@ -201,7 +202,7 @@ layout: default
   {{ minutes }} min read
 </p>
 
-{{ content }}
+# {{ content }}
 ```
 
 Then update your post front matter from:
