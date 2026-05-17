@@ -202,7 +202,7 @@ layout: default
   {{ minutes }} min read
 </p>
 
- {_{ content }_}  remove the _
+ {_{ content }_}  remove the _ on each side of the {...}
 ```
 
 Then update your post front matter from:
