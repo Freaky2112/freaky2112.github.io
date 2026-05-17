@@ -11,8 +11,8 @@ permalink: /docs/grafana/
 
 | Tool | Role |
 |------|------|
-| Prometheus | Collect metrics |
 | Grafana | Dashboards |
+| Prometheus | Collect metrics |
 | Node Exporter | Linux system metrics (CPU, RAM, disk) |
 | Loki | Collect logs |
 | Alloy | Gather and ship data (modern) |
