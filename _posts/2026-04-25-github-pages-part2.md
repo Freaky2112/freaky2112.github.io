@@ -202,7 +202,7 @@ layout: default
   {{ minutes }} min read
 </p>
 
-# {{ content }}
+ {{ cont/ent }}
 ```
 
 Then update your post front matter from:
