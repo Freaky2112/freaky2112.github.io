@@ -29,27 +29,6 @@ _config.yml             ← updated title, description, permalinks
 
 ---
 
-## 🚀 How to deploy
-
-### Option A — Copy individual files (safest)
-
-1. **Backup your repo** first (or just rely on git history)
-2. Copy these files into your repo, replacing existing ones:
-   - `_layouts/default.html`
-   - `assets/css/main.css` 
-   - `assets/js/main.js` 
-   - `index.md`
-   - `about.md`
-   - `blog.md`
-   - `projects.md`
-   - `docs.md`
-   - `404.md`
-   - `_config.yml`
-
-3. Commit and push — GitHub Pages will rebuild automatically
-
----
-
 ## ⚙️ Config — things to personalise
 
 ### In `_config.yml`
