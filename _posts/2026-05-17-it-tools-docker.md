@@ -66,5 +66,8 @@ The official demo at [it-tools.tech](https://it-tools.tech) is publicly availabl
 
 IT-Tools docker SetUp:
  
- <a href="/docs/it-tools/">Grafana</a>
+ Links: <a href="/docs/it-tools/">It-Tools</a>
 
+
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

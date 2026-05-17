@@ -37,4 +37,8 @@ There no easy way to bypass thoses modem cause they got build-in Ont (but go che
 
 Here one of the best website:
  
- <a href="https://pon.wiki/">Pon Wiki</a>
+ Links: <a href="https://pon.wiki/">Pon Wiki</a>
+
+ 
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*

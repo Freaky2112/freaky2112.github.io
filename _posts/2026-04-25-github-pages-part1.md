@@ -316,3 +316,7 @@ I run a self-hosted environment focused on automation, monitoring, and privacy.
 
 - Go to **Settings → Pages**
 - Source: `main` branch
+
+
+---
+*Questions / idea? Open an issue on [GitHub](https://github.com/Freaky2112/freaky2112.github.io).*
