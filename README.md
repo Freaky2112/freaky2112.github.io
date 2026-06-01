@@ -4,6 +4,28 @@ Complete redesign of `freaky2112.github.io` — dark terminal aesthetic,
 green accent, light/dark toggle, new page names, custom 404, and more.
 
 ---
+## 📂 Repo Structure
+
+```
+Scripts/
+├───root/
+│   ├── _docs/
+│   ├── _includes/
+│   ├── _layouts/
+│   ├── _posts/
+│   ├── _projects/
+│   ├── .github/
+│        └── workflow/
+│   ├── assets/
+│   ├── indev/
+│   ├── _config.yml
+│   ├── 404.md
+│   ├── about.md
+│   ├── blog.md
+│   ├── docs.md
+│   ├── index.md
+│   ├── projects.md
+│   └── README.md
 
 ## 📦 Files in this package
 
