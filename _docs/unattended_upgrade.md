@@ -84,6 +84,7 @@ systemctl status apt-daily-upgrade.timer
 
 # Setting Up s-nail with Gmail SMTP
 
+
 `s-nail` is the modern variant of the classic `mailx` command. It supports native external SMTP configuration using the modern `mta` string layout.
 
 ## Step 1: Generate a Gmail App Password
@@ -116,7 +117,7 @@ Paste the following configurations. Make sure to replace `your_email` and `your1
 ```text
 set v15-compat
 set from="Your Name <your_email@gmail.com>"
-set mta=smtp://your_email%40gmail.com:your16charpassword@://gmail.com
+set mta=smtp://your_email%40gmail.com:your16charpassword@smtp.gmail.com:587
 set smtp-use-starttls
 ```
 
