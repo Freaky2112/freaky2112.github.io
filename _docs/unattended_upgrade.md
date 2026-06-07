@@ -80,8 +80,6 @@ systemctl status apt-daily-upgrade.timer
 - If you enable `Automatic-Reboot`, set the time to a low-traffic window.
 - On Ubuntu, the `ubuntu-advantage-tools` origin can also be added if you use ESM (extended security maintenance).
 
-
-# Add s-nail mail
 ---
 
 # Setting Up s-nail with Gmail SMTP
