@@ -1,3 +1,8 @@
+---
+layout: default
+title: "It Tool Docker"
+---
+
 # IT-Tools: The Self-Hosted Swiss Army Knife for Developers
 
 How many browser tabs do you have open with tools like "base64 decode online", "jwt decoder", or "json formatter"? If you're a developer or sysadmin, probably more than you'd like to admit.
