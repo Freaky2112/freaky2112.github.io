@@ -92,7 +92,7 @@ Google blocks standard account passwords for command-line tools. You must use a 
 
 1. Go to your **[Google Account Security Settings](https://google.com)**.
 2. Verify that **2-Step Verification** is turned on.
-3. Go directly to the **[Google App Passwords Page](https://google.com)**.
+3. Go directly to the **[Google App Passwords Page](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://myaccount.google.com/apppasswords&ved=2ahUKEwi3hMa11oCVAxUOKFkFHQJfIZEQFnoECBwQAQ&usg=AOvVaw1rVibBR6kQTiUjqa0l_f8W)**.
 4. Give it a descriptive name (e.g., `Linux Mailx`) and click **Create**.
 5. Copy the 16-character code (e.g., `abcd efgh ijkl mnop`). 
    * *Note: Strip out all spaces when pasting this password into your configuration file.*
