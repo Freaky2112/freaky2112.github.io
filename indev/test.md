@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Unattended Upgrades & Gmail SMTP Alerts"
+title: "Unattended Upgrades & Gmail Notifications"
 ---
 
 Automate security patching on your server and get emailed when something actually happens — no babysitting required.
