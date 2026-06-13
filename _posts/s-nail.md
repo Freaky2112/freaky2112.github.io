@@ -1,0 +1,179 @@
+---
+layout: post
+title: "Unattended Upgrades & Gmail SMTP Alerts"
+---
+
+# S-nail: A Practical Guide to Configuring Email from the Linux Command Line
+
+If you've ever needed to send emails directly from a Linux server, script, monitoring system, or homelab service, S-nail is one of the most powerful command-line mail clients available. It is lightweight, highly configurable, and works well for everything from simple notifications to full-featured email workflows.
+
+In this guide, we'll cover the major components of an S-nail setup and explain what each part does, without focusing on the specific configuration syntax.
+
+## What Is S-nail?
+
+S-nail is a modern implementation of the classic Unix mail client. It allows users and applications to send and receive email directly from the command line.
+
+Many administrators use it for:
+
+* Server notifications
+* Backup reports
+* Monitoring alerts
+* Automated scripts
+* Homelab services
+* Cron job reports
+
+Because it has built-in SMTP support, S-nail can send emails directly through your mail provider without requiring a local mail server.
+
+## Understanding the Configuration File
+
+S-nail reads its settings from a configuration file. This file defines how emails are sent, which account is used, security settings, and various user preferences.
+
+Think of this file as the central location where all mail-related settings are stored.
+
+## Configuring Your Identity
+
+One of the first things you'll configure is your sender identity.
+
+This includes:
+
+* The email address that appears in the "From" field
+* Your display name
+* Character encoding preferences
+* Where copies of sent messages should be stored
+
+These settings ensure that messages appear professional and are properly formatted for recipients.
+
+## Connecting to an SMTP Server
+
+Most modern email providers require outgoing mail to be sent through an SMTP server.
+
+This section of the configuration defines:
+
+* The SMTP server address
+* The connection port
+* Whether encryption is required
+* Authentication credentials
+
+Without this information, S-nail won't know how to deliver messages to the outside world.
+
+## Encryption and Security
+
+Email providers almost always require encrypted connections.
+
+S-nail supports:
+
+* STARTTLS connections
+* SSL/TLS encrypted connections
+* Certificate validation
+* Custom certificate authorities
+
+Using proper certificate validation is strongly recommended in production environments to protect against man-in-the-middle attacks.
+
+## Authentication
+
+Most SMTP servers require users to authenticate before sending mail.
+
+Common authentication methods include:
+
+* Login authentication
+* Plain authentication
+* OAuth-based authentication (provider dependent)
+
+For personal accounts such as Gmail or Microsoft 365, application-specific passwords are often required instead of your normal account password.
+
+## Using Multiple Email Accounts
+
+One of S-nail's most useful features is support for multiple mail profiles.
+
+For example, you can maintain separate accounts for:
+
+* Personal email
+* Work email
+* Monitoring alerts
+* Automated notifications
+
+This allows a single system to send messages from different identities depending on the task being performed.
+
+## Receiving Mail with IMAP
+
+Although many users only send mail with S-nail, it can also access mailboxes through IMAP.
+
+This enables:
+
+* Reading messages
+* Managing folders
+* Accessing remote mailboxes
+* Synchronizing mail from providers
+
+For users who prefer command-line workflows, this provides a complete email solution.
+
+## Logging and Troubleshooting
+
+When things don't work as expected, S-nail includes extensive debugging capabilities.
+
+Troubleshooting usually focuses on:
+
+* SMTP connectivity
+* Authentication failures
+* Certificate validation errors
+* DNS issues
+* Firewall restrictions
+
+Enabling verbose logging can quickly reveal where a connection attempt is failing.
+
+## Securing Credentials
+
+A common mistake is storing mail passwords in plain text without proper protection.
+
+Best practices include:
+
+* Restricting configuration file permissions
+* Using dedicated mail accounts
+* Using application passwords when available
+* Separating alerting accounts from personal accounts
+
+For servers and homelabs, creating a dedicated notification account is often the safest approach.
+
+## Common Use Cases
+
+S-nail is frequently used in environments such as:
+
+### Monitoring and Alerting
+
+Send alerts from:
+
+* Grafana
+* Uptime Kuma
+* Prometheus
+* Home Assistant
+* Custom monitoring scripts
+
+### Backup Reporting
+
+Automatically email backup results and status reports after scheduled jobs complete.
+
+### Cron Notifications
+
+Receive reports whenever scheduled maintenance tasks succeed or fail.
+
+### Homelab Automation
+
+Integrate email notifications into Docker containers, home servers, and self-hosted applications.
+
+## Recommended Approach for Homelabs
+
+For most homelab users, the simplest and most reliable setup is:
+
+1. Create a dedicated alert email account.
+2. Enable SMTP access.
+3. Configure encrypted connections.
+4. Enable certificate validation.
+5. Test email delivery before integrating with applications.
+
+This approach keeps monitoring messages separate from personal email while making troubleshooting much easier.
+
+## Final Thoughts
+
+S-nail remains one of the most flexible command-line mail clients available for Linux. Whether you're running a small homelab or managing production infrastructure, it provides a reliable way to send and receive email without the complexity of a full mail server.
+
+Once configured correctly, S-nail becomes an excellent tool for automation, monitoring, reporting, and system administration tasks.
