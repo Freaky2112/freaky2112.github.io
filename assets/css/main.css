@@ -577,3 +577,45 @@ tr:last-child td { border-bottom: none; }
 
 .highlight { background: var(--bg-2); border-radius: var(--radius); }
 .highlight pre { margin: 0; }
+
+/* Container to hold both the code block and the absolute-positioned button */
+.code-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Base button styling */
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c9d1d9;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0; /* Hidden by default, appears on hover */
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  z-index: 10;
+}
+
+/* Show the button when hovering over the code wrapper */
+.code-wrapper:hover .copy-code-button {
+  opacity: 1;
+}
+
+/* Hover state for the button itself */
+.copy-code-button:hover {
+  background-color: #30363d;
+  color: #ffffff;
+}
+
+/* Success state styling when clicked */
+.copy-code-button.copied {
+  background-color: #238636;
+  color: #ffffff;
+  border-color: #2ea44f;
+}

@@ -150,3 +150,42 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('pre.highlight').forEach((codeBlock) => {
+    // Create the copy button
+    const button = document.createElement('button');
+    button.className = 'copy-code-button';
+    button.type = 'button';
+    button.innerText = 'Copy';
+
+    // Position the button relative to the code block container
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-wrapper';
+    codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+    wrapper.appendChild(codeBlock);
+    wrapper.appendChild(button);
+
+    // Add click event listener to handle clipboard writing
+    button.addEventListener('click', () => {
+      // Targets the inner <code> tag text content safely
+      const codeElement = codeBlock.querySelector('code');
+      const code = codeElement ? codeElement.innerText.trim() : codeBlock.innerText.trim();
+      
+      navigator.clipboard.writeText(code).then(() => {
+        button.innerText = 'Copied!';
+        button.classList.add('copied');
+        
+        // Reset button text after 2 seconds
+        setTimeout(() => {
+          button.innerText = 'Copy';
+          button.classList.remove('copied');
+        }, 2000);
+      }).catch((err) => {
+        console.error('Failed to copy text: ', err);
+        button.innerText = 'Error';
+      });
+    });
+  });
+});
