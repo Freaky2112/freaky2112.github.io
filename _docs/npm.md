@@ -47,11 +47,11 @@ services:
       - ./mysql:/var/lib/mysql
 networks: {}
 ```
-```shell
+
 Don't fogot your .env file with all your secrets
 
 .env
-
+```shell
 User= \
 DB_name= \
 DB_Password=\

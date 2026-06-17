@@ -24,8 +24,8 @@ services:
       - PROXIED=true
       - RRTYPE=A
 ```
-```shell
-Don't fogot your .env file with all your secrets
 
+Don't fogot your .env file with all your secrets
+```shell
 API_KEY=your_api_key
 ```
