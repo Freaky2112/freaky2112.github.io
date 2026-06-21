@@ -1,4 +1,8 @@
-## 1. Create a Discord Webhook
+---
+layout: default
+title: "Unattended Upgrade Discord Notification"
+---
+## Create a Discord Webhook
 
 In Discord:
 
@@ -11,7 +15,7 @@ It will look something like:
 
 https://discord.com/api/webhooks/123456789/abcdefghijklmnopqrstuvwxyz
 
-## 2. Create a notification script
+## Create a notification script
 ```bash
 sudo nano /usr/local/bin/discord-upgrade-notify.sh
 ```
@@ -36,7 +40,7 @@ Make it executable:
 ```bash
 sudo chmod +x /usr/local/bin/discord-upgrade-notify.sh
 ```
-## 3. Run it after unattended-upgrades
+## Run it after unattended-upgrades
 
 Edit:
 ```bash
