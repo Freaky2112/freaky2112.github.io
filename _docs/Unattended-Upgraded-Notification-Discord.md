@@ -2,6 +2,8 @@
 layout: default
 title: "Unattended Upgrade Discord Notification"
 ---
+# Unattended Upgrade Discord Notification
+
 ## Create a Discord Webhook
 
 In Discord:
