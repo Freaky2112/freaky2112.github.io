@@ -1,10 +1,7 @@
 ---
 
 layout: default
-title: "Building a Resilient Technitium DNS Cluster: Zone Replication & Automatic Failover"
-date: 2026-07-02
-categories: [homelab, dns]
-tags: [technitium, dns, high-availability, keepalived]
+title: "Technitium DNS Cluster"
 ---
 
 # Building a Resilient Technitium DNS Cluster: Zone Replication & Automatic Failover  
