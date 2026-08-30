@@ -1,0 +1,25 @@
+### Full House Switch
+
+# Basemant
+
+Den 3 switch
+Cuisine 2 switch
+Passage 1 switch
+Sous-sol 2 switch
+Chambre 2 switch
+Toilet 1 switch
+
+# First Floor
+
+Escalier 1 switch
+Cuisine 5 switch
+Chambre 5 switch
+Back 2 switch
+Salle a mager 1 switch
+Salon 2 switch
+Entree 1 switch
+Dehors 2 switch
+Lavage 1
+Salle de bain 2
+Toilet 1 (2 relay)
+
