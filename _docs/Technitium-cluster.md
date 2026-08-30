@@ -41,7 +41,7 @@ Neither piece alone gives you HA: replication without a VIP just means two serve
 2. Add the IP address for the **Secondary Node** (quick fill works here too)
 3. Fill in the **Primary Node URL**, e.g.:
    ```
-   ns.yourdomain.com:53443
+   https://yourserver.yourdomain.com:53443
    ```
 4. Add the **IP address of the Primary Node**
 5. Check **Ignore Certificate** (unless you've already got valid certs across both nodes)
