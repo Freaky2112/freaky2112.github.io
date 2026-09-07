@@ -1,0 +1,201 @@
+
+
+
+
+## Aquarium Light On
+alias: Aquarium on
+description: ''
+triggers:
+  - alias: Aquarium light morning
+    trigger: time
+    at: '09:00:00'
+    weekday:
+      - sun
+      - sat
+      - fri
+      - thu
+      - wed
+      - tue
+      - mon
+  - trigger: time
+    at: '14:00:00'
+    weekday:
+      - sun
+      - mon
+      - tue
+      - thu
+      - wed
+      - fri
+      - sat
+    alias: Aquarium light afternoon
+  - alias: Aquarium light dawn
+    trigger: time
+    at: '18:00:00'
+    weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+conditions:
+  - condition: device
+    type: is_off
+    device_id: 950d35af2ffdd0f9c1bc322c7fea875f
+    entity_id: a2c2eff6af96563f0c6b054eb1b5baff
+    domain: switch
+actions:
+  - type: turn_on
+    device_id: 950d35af2ffdd0f9c1bc322c7fea875f
+    entity_id: a2c2eff6af96563f0c6b054eb1b5baff
+    domain: switch
+mode: single
+
+
+## Aquarium Light Off
+alias: Aquarium Light Off
+description: ''
+triggers:
+  - alias: Aquarium light morning
+    trigger: time
+    at: '00:00:00'
+    weekday:
+      - sun
+      - sat
+      - fri
+      - thu
+      - wed
+      - tue
+      - mon
+  - alias: Aquarium light afternoon
+    trigger: time
+    at: '16:00:00'
+    weekday:
+      - sun
+      - mon
+      - tue
+      - thu
+      - wed
+      - fri
+      - sat
+  - alias: Aquarium light dawn
+    trigger: time
+    at: '23:00:00'
+    weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+conditions:
+  - condition: device
+    type: is_on
+    device_id: 950d35af2ffdd0f9c1bc322c7fea875f
+    entity_id: a2c2eff6af96563f0c6b054eb1b5baff
+    domain: switch
+actions:
+  - type: turn_off
+    device_id: 950d35af2ffdd0f9c1bc322c7fea875f
+    entity_id: a2c2eff6af96563f0c6b054eb1b5baff
+    domain: switch
+mode: single
+
+
+## Door Open
+alias: Garage Door Notification
+description: Notify Discord when garage door opens or closes
+triggers:
+  - entity_id:
+      - binary_sensor.third_reality_inc_3rdts01056z
+    to: 'on'
+    id: opened
+    trigger: state
+  - entity_id:
+      - binary_sensor.third_reality_inc_3rdts01056z
+    to: 'off'
+    id: closed
+    trigger: state
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: opened
+        sequence:
+          - data:
+              message: 🚨 Garage door **opened** at {{ now().strftime('%H:%M') }}
+            action: notify.discord_garage
+      - conditions:
+          - condition: trigger
+            id: closed
+        sequence:
+          - data:
+              message: ✅ Garage door **closed** at {{ now().strftime('%H:%M') }}
+            action: notify.discord_garage
+mode: single
+
+
+## Door Left Open
+alias: Garage door Open 5mins
+description: Notifies Discord every 5 minutes when the garage door is left open
+triggers:
+  - type: opened
+    device_id: f69a9b56760b49db333accb8db43cc7e
+    entity_id: 8d1c4d6729323917dd73e07434c9356c
+    domain: binary_sensor
+    trigger: device
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+conditions: []
+actions:
+  - repeat:
+      sequence:
+        - action: notify.discord_garage
+          metadata: {}
+          data:
+            message: Garage Door is still open!
+        - delay:
+            hours: 0
+            minutes: 5
+            seconds: 0
+      until:
+        - condition: state
+          entity_id: binary_sensor.8d1c4d6729323917dd73e07434c9356c
+          state: 'off'
+mode: single
+
+
+
+
+## Auto Close
+alias: 'Auto Close Light a 23:30 '
+description: ''
+triggers:
+  - trigger: time
+    at: '23:30:00'
+    weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+conditions:
+  - condition: light.is_on
+    target:
+      area_id: server_room
+    options:
+      behavior: any
+actions:
+  - action: light.turn_off
+    metadata: {}
+    target:
+      area_id: server_room
+    data: {}
+mode: single
