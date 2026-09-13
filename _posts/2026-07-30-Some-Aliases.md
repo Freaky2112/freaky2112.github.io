@@ -63,7 +63,7 @@ alias sshlist="ssh-add -l"
 alias  ssha='eval $(ssh-agent -s) && ssh-add ~/.ssh/your_private_key'
 ```
 
-# Misc
+## Misc
 ```bash
 alias clr="clear"
 alias cls="clear"
