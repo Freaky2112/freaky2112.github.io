@@ -1,10 +1,8 @@
 ---
 
 layout: default
-title: "Linux Aliases"
-description: "Useful Linux Bash aliases for system administration, networking, Docker, SSH, and homelab management."
-permalink: /docs/linux-aliases/
--------------------------------
+title: "Linux Aliases test"
+---
 
 # ⚡ Linux Aliases
 
