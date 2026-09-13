@@ -12,13 +12,13 @@ Whether I'm managing Docker containers, troubleshooting networking, checking ser
 
 ```text
 ╭──────────────────────────────────────────────╮
-│              ⚡ My HomeLab                   │
-│                                              │
-│  $ alias ll="ls -lah"                        │
-│  $ alias dps="docker ps"                     │
-│  $ alias ports="sudo ss -tulpn"              │
-│                                              │
-│  Less typing. More homelab.                  │
+│              ⚡ My HomeLab                 │
+│                                            │
+│  $ alias ll="ls -lah"                      │
+│  $ alias dps="docker ps"                   │
+│  $ alias ports="sudo ss -tulpn"            │
+│                                            │
+│  Less typing. More homelab.                │
 ╰──────────────────────────────────────────────╯
 ```
 
@@ -918,12 +918,12 @@ It's about taking something you type **20 times a week** and turning it into som
            ┌───────────────────────┐
            │       MY HOMELAB      │
            ├───────────────────────┤
-           │                       │
-           │  Type less            │
-           │  Admin faster         │
-           │  Break things faster  │
-           │                       │
-           │       ⚡ Linux        │
+           │                     │
+           │  Type less          │
+           │  Admin faster       │
+           │  Break things faster│
+           │                     │
+           │       ⚡ Linux      │
            └───────────────────────┘
 ```
 
