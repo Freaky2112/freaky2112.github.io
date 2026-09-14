@@ -5,6 +5,10 @@ title: "Some Interessting Aliases"
 
 #  Some of my Aliases
 A lsit of the most interessting Aliases
+you xan install it via github : 
+```bash
+curl -fsSL https://raw.githubusercontent.com/Freaky2112/Scripts/main/Bash/install | bash
+```
 
 ## SSH AGENT  Alias
 ### Can be nice if you set passphrase in your sshkey 
