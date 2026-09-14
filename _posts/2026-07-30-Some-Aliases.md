@@ -5,7 +5,11 @@ title: "Some Interessting Aliases"
 
 #  Some of my Aliases
 A lsit of the most interessting Aliases
-you xan install it via github : 
+You can donwload it 
+
+[My Scripts:](https://github.com/Freaky2112/Scripts/tree/main/Bash/Bashrc)  
+
+Or install it via github : 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Freaky2112/Scripts/main/Bash/install | bash
 ```
