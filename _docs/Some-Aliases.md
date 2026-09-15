@@ -26,6 +26,15 @@ source ~/.bashrc
 ### Can be nice if you set passphrase in your sshkey 
 Its primary job is to handle authentication so that you only have to type your key's passphrase once per session, rather than every single time you connect to a remote server or push code to Git
 
+## SSH
+```bash
+alias sshlist="ssh-add -l"
+alias  ssha='eval $(ssh-agent -s) && ssh-add ~/.ssh/your_private_key'
+alias sshconfig="nano ~/.ssh/config"
+alias sshperm="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
+alias sshhosts="cat ~/.ssh/known_hosts"
+```
+
 ## Navigation
 ```bash
 alias ..="cd .."
@@ -100,15 +109,6 @@ alias dockerdu="docker system df"
 ## Logs
 ```bash
 alias logs="sudo journalctl -f"
-```
-
-## SSH
-```bash
-alias sshlist="ssh-add -l"
-alias  ssha='eval $(ssh-agent -s) && ssh-add ~/.ssh/your_private_key'
-alias sshconfig="nano ~/.ssh/config"
-alias sshperm="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
-alias sshhosts="cat ~/.ssh/known_hosts"
 ```
 
 ## Misc
