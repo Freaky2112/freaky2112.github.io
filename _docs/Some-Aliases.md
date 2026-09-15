@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Some Interessting Aliases"
+permalink: /docs/some-aliases/
 ---
 
 #  Some of my Aliases
@@ -13,6 +14,13 @@ Or install it via github :
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Freaky2112/Scripts/main/Bash/install | bash
 ```
+
+Then reload the configuration:
+
+```bash
+source ~/.bashrc
+```
+
 
 ## SSH AGENT  Alias
 ### Can be nice if you set passphrase in your sshkey 
@@ -352,34 +360,3 @@ alias hgrep="history | grep"
 
 ---
 
-# 🚀 Installing the Aliases
-
-Open your Bash configuration:
-
-```bash
-nano ~/.bash_aliases
-```
-
-Add the aliases to the bottom of the file.
-
-Then reload the configuration:
-
-```bash
-source ~/.bashrc
-```
-
-Or use the alias:
-
-```bash
-reload
-```
-
-
-
----
-
-##  Final Thought
-
-A good alias isn't about making a command clever.
-
-It's about taking something you type **20 times a week** and turning it into something you type once.
